@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dettaglio piattaforma AI di MatevIA: governance, RAG, copiloti e impatto operativo.">
+<title>MatevIA | Piattaforma AI</title>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<main class="site-wrap">
+  <nav class="top-nav">
+    <div class="brand-wrap"><img class="brand-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA"><div class="brand">MatevIA <small>AI Native Governance</small></div></div>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a class="active" href="/piattaforma-ai.html">Piattaforma AI</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/cookie-policy.html">Cookie</a>
+      <a href="/termini-condizioni.html">Termini</a>
+    </div>
+  </nav>
+
+  <section class="hero reveal">
+    <div class="badges">
+      <span class="badge">Policy Engine</span>
+      <span class="badge">Approval Workflow</span>
+      <span class="badge">RAG + Explainability</span>
+    </div>
+    <div class="hero-head"><img class="hero-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA"><h1>AI nativa: veloce, utile, sotto controllo.</h1></div>
+    <p class="lead">L'AI in MatevIA non e un plugin esterno: e parte del flusso operativo. Suggerisce, sintetizza, recupera contesto dai documenti, ma mantiene controlli espliciti dove serve approvazione umana.</p>
+  </section>
+
+  <h2 class="section-title">Come agisce concretamente</h2>
+  <section class="grid cols-3">
+    <article class="card reveal">
+      <h3>1) Comprende il contesto operativo</h3>
+      <p>La richiesta viene letta nel contesto del modulo attivo (CRM, Magazzino, Contabilita) per restituire output operativo, non risposte generiche.</p>
+    </article>
+    <article class="card reveal">
+      <h3>2) Applica policy e guardrail</h3>
+      <p>Le azioni sono filtrate da regole configurabili: blocco azioni vietate, approvazioni multiple su operazioni sensibili, audit delle decisioni.</p>
+    </article>
+    <article class="card reveal">
+      <h3>3) Restituisce output spiegabile</h3>
+      <p>Risposta, confidenza e note vengono presentate all'utente per supportare una decisione rapida e verificabile.</p>
+    </article>
+  </section>
+
+  <h2 class="section-title">Estratto tecnico (parziale)</h2>
+  <section class="card reveal">
+    <p style="margin-bottom:10px">Di seguito un <strong>piccolo estratto</strong> dal motore policy AI (senza pubblicare il codice completo):</p>
+    <pre class="code">if (executeWithConfirmation)
+{
+    var doubleApproval = cfg.RequireDoubleApprovalActions ?? Array.Empty&lt;string&gt;();
+    if (doubleApproval.Any(a =&gt; string.Equals(a?.Trim(), key, StringComparison.OrdinalIgnoreCase)))
+    {
+        return new AiPolicyDecision(
+            Allowed: false,
+            ErrorCode: "AI_APPROVAL_REQUIRED",
+            RequiresApproval: true,
+            RequiredApprovals: Math.Max(2, cfg.DefaultRequiredApprovals));
+    }
+}</pre>
+    <p class="muted" style="margin-top:10px">Inoltre la configurazione AI prevede redazione dati sensibili attiva di default: <code>EnableSensitiveDataRedaction = true</code>.</p>
+  </section>
+
+  <h2 class="section-title">Funzioni AI ad alto impatto</h2>
+  <section class="grid cols-2">
+    <article class="card reveal">
+      <h3>AI Agenda + Bozze operative</h3>
+      <ul class="list">
+        <li>Priorita giornaliere suggerite su attivita reali.</li>
+        <li>Bozze gia compilate e modificabili prima della conferma.</li>
+        <li>Riduzione tempo su follow-up, comunicazioni, azioni ripetitive.</li>
+      </ul>
+    </article>
+    <article class="card reveal">
+      <h3>RAG multi-tenant</h3>
+      <ul class="list">
+        <li>Indicizzazione documenti e procedure interne.</li>
+        <li>Q&A contestuale con fonti e supporto decisionale.</li>
+        <li>Riduzione della ricerca manuale in archivi dispersi.</li>
+      </ul>
+    </article>
+  </section>
+
+  <h2 class="section-title">Utilita per il lavoro quotidiano</h2>
+  <section class="card reveal">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Problema tipico</th>
+          <th>Intervento MatevIA AI</th>
+          <th>Effetto atteso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CRM commerciale</td>
+          <td>Follow-up non uniformi e lenti</td>
+          <td>Bozze contestuali su cliente/deal</td>
+          <td>Maggiore velocita e coerenza</td>
+        </tr>
+        <tr>
+          <td>Supporto operativo</td>
+          <td>Info disperse in documenti</td>
+          <td>RAG con risposta + fonti</td>
+          <td>Decisioni piu rapide e verificabili</td>
+        </tr>
+        <tr>
+          <td>Governance processi</td>
+          <td>Rischio azioni non autorizzate</td>
+          <td>Policy engine + approvazioni</td>
+          <td>Controllo e tracciabilita</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <h2 class="section-title">Messaggio chiave</h2>
+  <section class="card reveal">
+    <p>MatevIA porta l'AI dove serve davvero: dentro i processi operativi. L'obiettivo non e "fare scena", ma ridurre tempi morti, aumentare qualita decisionale e mantenere sicurezza e controllo umano.</p>
+    <div class="cta-row" style="margin-top:14px">
+      <a class="btn primary" href="mailto:stona.matteo@gmail.com">Parla del tuo caso d'uso</a>
+      <a class="btn" href="/index.html">Torna alla panoramica</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>MatevIA - AI nativa integrata nel flusso operativo</span>
+    <span>
+      <a href="/index.html">Home</a> |
+      <a href="/privacy.html">Privacy</a> |
+      <a href="/cookie-policy.html">Cookie</a> |
+      <a href="/termini-condizioni.html">Termini</a>
+    </span>
+  </footer>
+</main>
+</body>
+</html>
+
+
+

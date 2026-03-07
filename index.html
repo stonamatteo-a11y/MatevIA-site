@@ -3,100 +3,136 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="MatevIA: pagina informativa del progetto software gestionale desktop.">
-<title>MatevIA - Pagina informativa progetto software</title>
-<style>
-:root{
---bg:#f4f6fb;
---ink:#162033;
---muted:#5d6a84;
---brand:#0f6d7b;
---card:#ffffff;
---line:#dbe2ef;
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:Segoe UI, Trebuchet MS, sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%, #ffffff 0%, var(--bg) 60%);}
-.wrap{max-width:1100px;margin:auto;padding:30px 20px 50px;}
-header{margin-bottom:30px;}
-h1{margin:0;font-size:38px;}
-.lead{margin-top:8px;color:var(--muted);font-size:18px;}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:20px;box-shadow:0 10px 22px rgba(0,0,0,0.05);}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.feature h3{margin:0 0 6px;}
-.feature p{margin:0;color:var(--muted);}
-.contact{font-size:16px;line-height:1.6;}
-.whatsapp{display:inline-block;margin-top:10px;padding:10px 14px;background:var(--brand);color:white;border-radius:8px;text-decoration:none;font-weight:600;}
-.legal-note{font-size:14px;color:var(--muted);line-height:1.6;}
-footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;}
-footer a{color:var(--brand);text-decoration:none;}
-footer a:hover{text-decoration:underline;}
-@media(max-width:900px){
-.grid{grid-template-columns:1fr;}
-h1{font-size:30px;}
-}
-</style>
+<meta name="description" content="MatevIA: gestionale desktop con AI nativa, moduli operativi integrati e flussi controllati con approvazioni.">
+<title>MatevIA | Gestionale Desktop con AI nativa</title>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<main class="wrap">
-<header>
-<h1>MatevIA</h1>
-<p class="lead">MatevIA e un progetto software desktop dedicato alla gestione organizzata di dati, attivita e processi operativi con supporto intelligente.</p>
-</header>
+<main class="site-wrap">
+  <nav class="top-nav">
+    <div class="brand-wrap"><img class="brand-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA"><div class="brand">MatevIA <small>Desktop Operations + AI Native</small></div></div>
+    <div class="nav-links">
+      <a class="active" href="/index.html">Home</a>
+      <a href="/piattaforma-ai.html">Piattaforma AI</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/cookie-policy.html">Cookie</a>
+      <a href="/termini-condizioni.html">Termini</a>
+    </div>
+  </nav>
 
-<section class="card">
-<h2>Il progetto</h2>
-<p style="color:var(--muted);line-height:1.6">
-MatevIA nasce come progetto personale di sviluppo software con l'obiettivo di creare un gestionale desktop semplice, modulare e facilmente utilizzabile.
-Questa pagina ha finalita esclusivamente informativa e descrive il progetto e la sua evoluzione.
-</p>
-</section>
+  <section class="hero reveal">
+    <div class="badges">
+      <span class="badge">AI Agenda + Bozze operative</span>
+      <span class="badge">RAG multi-tenant</span>
+      <span class="badge">Contabilita + Magazzino + CRM</span>
+    </div>
+    <div class="hero-head"><img class="hero-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA"><h1>Il gestionale che lavora con te, non solo per te.</h1></div>
+    <p class="lead">MatevIA e un progetto software desktop che unisce operativita quotidiana e AI nativa: suggerisce priorita, prepara bozze, interroga documenti interni, mantiene controllo umano nelle azioni sensibili.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="/piattaforma-ai.html">Scopri come agisce l'AI</a>
+      <a class="btn" href="mailto:stona.matteo@gmail.com">Richiedi informazioni</a>
+    </div>
+  </section>
 
-<section class="grid">
-<div class="card feature">
-<h3>Gestione documenti</h3>
-<p>Organizzazione di documenti operativi con struttura modulare desktop.</p>
-</div>
-<div class="card feature">
-<h3>Contatti e attivita</h3>
-<p>Gestione di contatti, informazioni e attivita operative in modo centralizzato.</p>
-</div>
-<div class="card feature">
-<h3>Gestione prodotti</h3>
-<p>Strumenti per la gestione delle informazioni di prodotti, movimenti e dati organizzativi.</p>
-</div>
-</section>
+  <h2 class="section-title">Perche MatevIA e utile</h2>
+  <section class="grid cols-3">
+    <article class="card reveal">
+      <h3>Unica regia operativa</h3>
+      <p>Dashboard, contabilita, magazzino, CRM e utenti in un unico ambiente desktop con workflow coerenti e dati collegati.</p>
+    </article>
+    <article class="card reveal">
+      <h3>AI assistita e controllata</h3>
+      <p>L'AI supporta chi lavora, ma non sostituisce il controllo: preview, conferma esplicita e policy di approvazione sulle azioni sensibili.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Decisioni piu veloci</h3>
+      <p>Da "cercare e ricostruire" a "vedere, validare, agire": meno passaggi manuali e maggiore continuita nel lavoro giornaliero.</p>
+    </article>
+  </section>
 
-<section class="card">
-<h2>Contatti</h2>
-<div class="contact">
-Email:<br>
-<b><a href="mailto:stona.matteo@gmail.com">stona.matteo@gmail.com</a></b>
-<br><br>
-Telefono / WhatsApp:<br>
-<b>392 4402106</b>
-<br>
-<a class="whatsapp" href="https://wa.me/393924402106" target="_blank" rel="noopener">Contattami su WhatsApp</a>
-</div>
-</section>
+  <h2 class="section-title">Funzioni principali</h2>
+  <section class="grid cols-2">
+    <article class="card reveal">
+      <h3>Operativita business</h3>
+      <ul class="list">
+        <li>Contabilita: fatture, preview, registro IVA, scadenziario, flussi collegati al magazzino.</li>
+        <li>Magazzino: prodotti, locations, movimenti carico/scarico, giacenze aggiornate.</li>
+        <li>CRM: clienti, deal, attivita, pipeline e automazioni operative.</li>
+        <li>Sicurezza: ruoli/permessi, MFA, policy per tenant e gestione utenti.</li>
+      </ul>
+    </article>
+    <article class="card reveal">
+      <h3>AI nativa integrata</h3>
+      <ul class="list">
+        <li>AI Agenda giornaliera con priorita operative.</li>
+        <li>Bozze AI modificabili prima della conferma.</li>
+        <li>RAG su documenti indicizzati con fonti richiamabili.</li>
+        <li>Copiloti contestuali in CRM, Magazzino e Contabilita.</li>
+        <li>Governance con audit, redazione dati sensibili e approvazioni multi-livello.</li>
+      </ul>
+    </article>
+  </section>
 
-<section class="card legal-note">
-<h2>Informazioni legali</h2>
-<p>
-Il sito non pubblica listini prezzi, non abilita acquisti online e non offre aree riservate. Contiene contenuti informativi sul progetto MatevIA.
-</p>
-<p>
-Consulta le pagine dedicate: <a href="/privacy.html">Privacy Policy</a>, <a href="/cookie-policy.html">Cookie Policy</a>, <a href="/termini-condizioni.html">Termini e condizioni d'uso</a>.
-</p>
-</section>
+  <h2 class="section-title">Tempo risparmiato (stima media)</h2>
+  <section class="card reveal">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Attivita tipica</th>
+          <th>Approccio tradizionale</th>
+          <th>Con MatevIA + AI nativa</th>
+          <th>Riduzione tempi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Preparare follow-up clienti/deal</td>
+          <td>Ricerca note + scrittura da zero</td>
+          <td>Bozza AI contestuale + revisione finale</td>
+          <td><strong>30-50%</strong></td>
+        </tr>
+        <tr>
+          <td>Recuperare info da procedure interne</td>
+          <td>Ricerca manuale in documenti sparsi</td>
+          <td>Query RAG con risposta + fonti</td>
+          <td><strong>40-70%</strong></td>
+        </tr>
+        <tr>
+          <td>Prioritizzare attivita giornaliere</td>
+          <td>Valutazione manuale non uniforme</td>
+          <td>AI Agenda con azioni suggerite</td>
+          <td><strong>20-35%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="muted" style="margin-top:10px">Valori indicativi su flussi operativi tipici; il risultato reale dipende da volume, qualita dati e processo aziendale.</p>
+  </section>
 
-<footer>
-<span>MatevIA - progetto software personale</span>
-<span>
-<a href="/privacy.html">Privacy</a> |
-<a href="/cookie-policy.html">Cookie</a> |
-<a href="/termini-condizioni.html">Termini</a>
-</span>
-</footer>
+  <section class="grid cols-2">
+    <article class="card reveal">
+      <h3>Cosa non fa il sito</h3>
+      <p>Questa pagina e informativa: non gestisce account pubblici, non vende online e non mostra codice sorgente del programma.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Contatti</h3>
+      <p>Email: <a href="mailto:stona.matteo@gmail.com">stona.matteo@gmail.com</a><br>Telefono / WhatsApp: <strong>392 4402106</strong></p>
+      <div class="cta-row"><a class="btn" href="https://wa.me/393924402106" target="_blank" rel="noopener">Contatta su WhatsApp</a></div>
+    </article>
+  </section>
+
+  <footer>
+    <span>MatevIA - progetto software personale</span>
+    <span>
+      <a href="/piattaforma-ai.html">Piattaforma AI</a> |
+      <a href="/privacy.html">Privacy</a> |
+      <a href="/cookie-policy.html">Cookie</a> |
+      <a href="/termini-condizioni.html">Termini</a>
+    </span>
+  </footer>
 </main>
 </body>
 </html>
+
+
+
