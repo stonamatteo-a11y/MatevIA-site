@@ -234,3 +234,46 @@ footer a:hover{text-decoration:underline}
 
 
 
+
+.lang-tools{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-left:auto;
+}
+.lang-label{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:600;
+}
+.lang-select{
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:6px 9px;
+  background:#0f1a2d;
+  color:var(--text);
+  font-family:inherit;
+  font-size:13px;
+}
+.lang-select:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+#google_translate_element{
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  clip-path:inset(50%);
+  white-space:nowrap;
+}
+.goog-te-banner-frame.skiptranslate,
+body > .skiptranslate{
+  display:none !important;
+}
+body{top:0 !important}
+
+@media(max-width:760px){
+  .lang-tools{margin-left:0}
+}
