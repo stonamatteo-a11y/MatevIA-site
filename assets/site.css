@@ -70,6 +70,66 @@ h1{margin:0;font-size:42px;line-height:1.1}
 .section-title{margin:24px 0 10px;font-size:24px}
 .list{margin:0;padding-left:18px;color:var(--muted);line-height:1.65}
 .list li{margin:4px 0}
+.architecture-block{
+  margin-top:14px;
+  border-color:rgba(34,197,94,.28);
+  background:
+    radial-gradient(circle at 90% 12%, rgba(34,197,94,.14) 0%, transparent 35%),
+    radial-gradient(circle at 8% 85%, rgba(6,182,212,.12) 0%, transparent 36%),
+    linear-gradient(150deg, rgba(10,18,32,.97) 0%, rgba(17,24,39,.95) 58%, rgba(11,19,36,.95) 100%);
+}
+.arch-kicker{
+  margin:0;
+  font-size:12px;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  color:#86efac;
+  font-weight:700;
+}
+.arch-title{
+  margin:6px 0 8px;
+  font-size:30px;
+  line-height:1.15;
+  color:#f0fdf4;
+}
+.arch-lead{
+  margin:0;
+  color:#d5f6ff;
+  font-size:17px;
+  line-height:1.55;
+  max-width:900px;
+}
+.arch-list{
+  margin-top:12px;
+  list-style:none;
+  padding-left:0;
+}
+.arch-list li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+}
+.arch-icon{
+  display:inline-flex;
+  align-items:center;
+  padding:2px 7px;
+  margin-right:6px;
+  border:1px solid rgba(34,211,238,.35);
+  border-radius:999px;
+  background:rgba(6,182,212,.12);
+  color:#67e8f9;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.4px;
+  vertical-align:middle;
+}
+.arch-check{
+  color:#22c55e;
+  font-weight:700;
+  line-height:1.45;
+  margin-top:1px;
+  flex:0 0 auto;
+}
 .table{width:100%;border-collapse:collapse;font-size:14px}
 .table th,.table td{border:1px solid var(--line);padding:10px;vertical-align:top}
 .table th{background:#0b1220;color:#c8f7ff;text-align:left}
@@ -277,3 +337,5 @@ body{top:0 !important}
 @media(max-width:760px){
   .lang-tools{margin-left:0}
 }
+
+
