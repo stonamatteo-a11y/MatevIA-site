@@ -339,3 +339,61 @@ body{top:0 !important}
 }
 
 
+
+.cookie-consent{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:9999;
+  width:min(460px, calc(100% - 32px));
+  border:1px solid rgba(34,211,238,.35);
+  border-radius:14px;
+  background:linear-gradient(150deg, rgba(11,18,32,.98) 0%, rgba(17,24,39,.97) 100%);
+  box-shadow:0 14px 34px rgba(0,0,0,.38);
+  padding:14px;
+}
+.cookie-consent-text{
+  margin:0;
+  color:#dbeafe;
+  font-size:14px;
+  line-height:1.5;
+}
+.cookie-consent-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.cookie-btn{
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:7px 11px;
+  background:#132033;
+  color:var(--text);
+  font-family:inherit;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+}
+.cookie-btn-primary{
+  background:linear-gradient(120deg,#0d2f39,#0b4e5b);
+  border-color:#116476;
+  color:#c8f7ff;
+}
+.cookie-btn:hover{filter:brightness(1.08)}
+.cookie-link{
+  color:#67e8f9;
+  text-decoration:none;
+  font-size:13px;
+}
+.cookie-link:hover{text-decoration:underline}
+
+@media(max-width:760px){
+  .cookie-consent{
+    left:12px;
+    right:12px;
+    bottom:12px;
+    width:auto;
+  }
+}

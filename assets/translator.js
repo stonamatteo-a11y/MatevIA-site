@@ -3,6 +3,11 @@
   const BASE_LANG = "it";
   const DEFAULT_LANG = "it";
   const AUTO_SWITCH_FLAG = "matevia-lang-auto-switch";
+  let translateLoaded = false;
+
+  function hasConsent() {
+    return !!(window.MateviaConsent && typeof window.MateviaConsent.hasConsent === "function" && window.MateviaConsent.hasConsent());
+  }
 
   function readGoogTransLang() {
     const match = document.cookie.match(/(?:^|;\s*)googtrans=\/[^/]+\/([^;]+)/);
@@ -68,9 +73,40 @@
     return true;
   }
 
+  function ensureTranslateScript() {
+    if (translateLoaded || !hasConsent()) {
+      return;
+    }
+
+    if (!document.getElementById("matevia-google-translate")) {
+      const script = document.createElement("script");
+      script.id = "matevia-google-translate";
+      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    translateLoaded = true;
+  }
+
   function initLanguageSelect() {
     const langSelect = document.querySelector("[data-lang-switch]");
     if (!langSelect) {
+      return;
+    }
+
+    if (!hasConsent()) {
+      langSelect.value = DEFAULT_LANG;
+      langSelect.title = "Per usare la traduzione automatica accetta i cookie di terze parti.";
+      langSelect.addEventListener("change", (event) => {
+        const selectedLang = event.target.value || DEFAULT_LANG;
+        if (selectedLang !== DEFAULT_LANG) {
+          event.target.value = DEFAULT_LANG;
+          if (window.MateviaConsent && typeof window.MateviaConsent.openConsentBanner === "function") {
+            window.MateviaConsent.openConsentBanner();
+          }
+        }
+      });
       return;
     }
 
@@ -84,7 +120,7 @@
   }
 
   window.googleTranslateElementInit = () => {
-    if (!window.google?.translate?.TranslateElement) {
+    if (!window.google?.translate?.TranslateElement || !hasConsent()) {
       return;
     }
 
@@ -98,19 +134,30 @@
     );
   };
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function bootTranslator() {
+    if (!hasConsent()) {
+      initLanguageSelect();
+      return;
+    }
+
     if (maybeAutoSwitchFromBrowserLang()) {
       return;
     }
 
     initLanguageSelect();
+    ensureTranslateScript();
+  }
 
-    if (!document.getElementById("matevia-google-translate")) {
-      const script = document.createElement("script");
-      script.id = "matevia-google-translate";
-      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      document.body.appendChild(script);
+  document.addEventListener("DOMContentLoaded", () => {
+    bootTranslator();
+
+    if (window.MateviaConsent && typeof window.MateviaConsent.onChange === "function") {
+      window.MateviaConsent.onChange((granted) => {
+        if (granted) {
+          markAutoSwitchDone();
+          window.location.reload();
+        }
+      });
     }
   });
 })();
