@@ -48,13 +48,15 @@
 </script>
 </head>
 <body>
-<main class="site-wrap">
-  <nav class="top-nav">
+<a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+<main id="main-content" class="site-wrap" tabindex="-1">
+  <header role="banner">
+  <nav class="top-nav" aria-label="Navigazione principale">
     <div class="brand-wrap"><img class="brand-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA"><div class="brand">MatevIA <small>ORX governance depth</small></div></div>
     <div class="nav-links">
       <a href="/index.html">Home</a>
       <a href="/piattaforma-ai.html">Piattaforma AI</a>
-      <a class="active" href="/orx.html">ORX</a>
+      <a class="active" aria-current="page" href="/orx.html">ORX</a>
       <a href="/schermate-reali.html">Schermate Reali</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/cookie-policy.html">Cookie</a>
@@ -69,6 +71,7 @@
       <div id="google_translate_element" aria-hidden="true"></div>
     </div>
   </nav>
+  </header>
 
   <section class="hero reveal">
     <div class="badges">
@@ -217,7 +220,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer role="contentinfo">
     <span>ORX powered by MatevIA - Decision Orchestration and Governance</span>
     <span>
       <a href="/index.html">Home</a> |
@@ -230,7 +233,7 @@
   </footer>
 </main>
 
-<div class="lightbox" id="orx-lightbox" hidden>
+<div class="lightbox" id="orx-lightbox" aria-hidden="true" hidden>
   <div class="lightbox-overlay" id="orx-lightbox-overlay">
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="orx-lightbox-title">
       <button class="lightbox-close" type="button" data-orx-lightbox-close aria-label="Chiudi vista fullscreen">X</button>
@@ -246,19 +249,58 @@
   const overlay = document.getElementById('orx-lightbox-overlay');
   const openButton = document.querySelector('[data-orx-lightbox-open]');
   const closeButton = lightbox ? lightbox.querySelector('[data-orx-lightbox-close]') : null;
+  let lastFocusedElement = null;
 
   if (!lightbox || !overlay || !openButton || !closeButton) {
     return;
   }
 
+  const focusableSelector = 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])';
+  const trapFocus = function(event){
+    if (event.key !== 'Tab' || lightbox.hidden) {
+      return;
+    }
+
+    const focusable = Array.from(lightbox.querySelectorAll(focusableSelector))
+      .filter(function(node){
+        return !node.hasAttribute('disabled') && node.getClientRects().length > 0;
+      });
+
+    if (focusable.length === 0) {
+      event.preventDefault();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+      return;
+    }
+
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
   const closeLightbox = function(){
     lightbox.hidden = true;
+    lightbox.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('lightbox-open');
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+      return;
+    }
     openButton.focus();
   };
 
   openButton.addEventListener('click', function(){
+    lastFocusedElement = document.activeElement;
     lightbox.hidden = false;
+    lightbox.setAttribute('aria-hidden', 'false');
     document.body.classList.add('lightbox-open');
     closeButton.focus();
   });
@@ -276,6 +318,8 @@
       closeLightbox();
     }
   });
+
+  lightbox.addEventListener('keydown', trapFocus);
 })();
 </script>
 <script src="/assets/consent.js" defer></script>

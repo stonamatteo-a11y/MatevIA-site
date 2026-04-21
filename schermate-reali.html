@@ -48,14 +48,16 @@
 </script>
 </head>
 <body>
-<main class="site-wrap showcase-page">
-  <nav class="top-nav">
+<a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+<main id="main-content" class="site-wrap showcase-page" tabindex="-1">
+  <header role="banner">
+  <nav class="top-nav" aria-label="Navigazione principale">
     <div class="brand-wrap"><img class="brand-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA"><div class="brand">MatevIA <small>Visual proof</small></div></div>
     <div class="nav-links">
       <a href="/index.html">Home</a>
       <a href="/piattaforma-ai.html">Piattaforma AI</a>
       <a href="/orx.html">ORX</a>
-      <a class="active" href="/schermate-reali.html">Schermate Reali</a>
+      <a class="active" aria-current="page" href="/schermate-reali.html">Schermate Reali</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/cookie-policy.html">Cookie</a>
       <a href="/termini-condizioni.html">Termini</a>
@@ -69,6 +71,7 @@
       <div id="google_translate_element" aria-hidden="true"></div>
     </div>
   </nav>
+  </header>
 
   <section class="showcase-intro reveal">
     <div class="badges">
@@ -108,7 +111,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer role="contentinfo">
     <span>MatevIA - Schermate reali del programma</span>
     <span>
       <a href="/index.html">Home</a> |
@@ -121,7 +124,7 @@
   </footer>
 </main>
 
-<div class="lightbox" id="gallery-lightbox" hidden>
+<div class="lightbox" id="gallery-lightbox" aria-hidden="true" hidden>
   <div class="lightbox-overlay" id="gallery-lightbox-overlay">
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="gallery-lightbox-title">
       <button class="lightbox-close" type="button" data-gallery-close aria-label="Chiudi vista fullscreen">X</button>
@@ -145,8 +148,40 @@
     return;
   }
 
+  const focusableSelector = 'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])';
+  const trapFocus = function(event){
+    if (event.key !== 'Tab' || lightbox.hidden) {
+      return;
+    }
+
+    const focusable = Array.from(lightbox.querySelectorAll(focusableSelector))
+      .filter(function(node){
+        return !node.hasAttribute('disabled') && node.getClientRects().length > 0;
+      });
+
+    if (focusable.length === 0) {
+      event.preventDefault();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+      return;
+    }
+
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
   const closeLightbox = function(){
     lightbox.hidden = true;
+    lightbox.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('lightbox-open');
     imageNode.removeAttribute('src');
     if (lastTrigger) {
@@ -168,6 +203,7 @@
       imageNode.setAttribute('alt', alt);
       titleNode.textContent = title;
       lightbox.hidden = false;
+      lightbox.setAttribute('aria-hidden', 'false');
       document.body.classList.add('lightbox-open');
       closeButton.focus();
     });
@@ -186,6 +222,8 @@
       closeLightbox();
     }
   });
+
+  lightbox.addEventListener('keydown', trapFocus);
 })();
 </script>
 <script src="/assets/consent.js" defer></script>

@@ -54,12 +54,14 @@
 </script>
 </head>
 <body>
-<main class="site-wrap">
-  <nav class="top-nav">
+<a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+<main id="main-content" class="site-wrap" tabindex="-1">
+  <header role="banner">
+  <nav class="top-nav" aria-label="Navigazione principale">
     <div class="brand-wrap"><img class="brand-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA"><div class="brand">MatevIA <small>Control surface and execution surface</small></div></div>
     <div class="nav-links">
       <a href="/index.html">Home</a>
-      <a class="active" href="/piattaforma-ai.html">Piattaforma AI</a>
+      <a class="active" aria-current="page" href="/piattaforma-ai.html">Piattaforma AI</a>
       <a href="/orx.html">ORX</a>
       <a href="/schermate-reali.html">Schermate Reali</a>
       <a href="/privacy.html">Privacy</a>
@@ -75,6 +77,7 @@
       <div id="google_translate_element" aria-hidden="true"></div>
     </div>
   </nav>
+  </header>
 
   <section class="hero reveal">
     <div class="badges">
@@ -153,7 +156,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer role="contentinfo">
     <span>MatevIA - control surface operativa del sistema ORX</span>
     <span>
       <a href="/index.html">Home</a> |

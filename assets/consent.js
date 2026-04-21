@@ -42,7 +42,8 @@
     var banner = document.createElement('aside');
     banner.id = 'matevia-consent-banner';
     banner.className = 'cookie-consent';
-    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Preferenze cookie');
     banner.setAttribute('aria-live', 'polite');
     banner.innerHTML =
       '<p class="cookie-consent-text">Per abilitare traduzione automatica e analytics usiamo servizi Google che possono impostare cookie di terze parti.</p>' +

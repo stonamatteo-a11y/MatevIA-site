@@ -34,8 +34,10 @@
 <meta name="matevia-ga4-id" content="G-X006Y6LZE6">
 </head>
 <body>
-<main class="site-wrap">
-  <nav class="top-nav">
+<a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+<main id="main-content" class="site-wrap" tabindex="-1">
+  <header role="banner">
+  <nav class="top-nav" aria-label="Navigazione principale">
     <div class="brand-wrap"><img class="brand-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA"><div class="brand">MatevIA <small>Termini d'uso</small></div></div>
     <div class="nav-links">
       <a href="/index.html">Home</a>
@@ -44,7 +46,7 @@
       <a href="/schermate-reali.html">Schermate Reali</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/cookie-policy.html">Cookie</a>
-      <a class="active" href="/termini-condizioni.html">Termini</a>
+      <a class="active" aria-current="page" href="/termini-condizioni.html">Termini</a>
     </div>
     <div class="lang-tools">
       <label class="lang-label" for="lang-switch">Lingua</label>
@@ -55,6 +57,7 @@
       <div id="google_translate_element" aria-hidden="true"></div>
     </div>
   </nav>
+  </header>
 
   <section class="card" style="margin-top:16px">
     <h1 style="margin:0 0 10px">Termini e condizioni d'uso</h1>
@@ -82,7 +85,7 @@
     <p>Email: <a href="mailto:stona.matteo@gmail.com">stona.matteo@gmail.com</a></p>
   </section>
 
-  <footer>
+  <footer role="contentinfo">
     <span>MatevIA - Informazioni legali</span>
     <span>
       <a href="/index.html">Home</a> |
