@@ -55,6 +55,96 @@ const content = {
       }
     ]
   },
+  validationPack: {
+    title: "Executive Validation Summary",
+    intro: "Le evidenze disponibili nel workspace mostrano uno stato demo-ready industriale, con governance ORX, integrazione MatevIA, boundary DEX e contesto ENX validati in scenari controllati.",
+    summary: [
+      { label: "MatevIA", value: "PASS", note: "Preflight tecnico, smoke e verifiche manuali UI completati il 2026-03-10." },
+      { label: "ORX Phase 8", value: "Passed", note: "Goal, approval, Dry Run, governance, tenant, overlay, persistence, secret, runtime e integrazione MatevIA coperti." },
+      { label: "ORX-MateVIA E2E", value: "E2E_PASS", note: "Live Canary completato su workflow approvati, con ERP writes protetti." },
+      { label: "DEX Boundary", value: "PASS", note: "Comandi ORX normalizzati, auth applicativa, raw OT block e safe rejection validati." }
+    ],
+    tests: [
+      {
+        area: "MatevIA",
+        scenario: "Preflight, smoke e verifiche manuali UI",
+        evidenceDate: "2026-03-10",
+        outcome: "PASS",
+        evidence: "Login, dashboard, moduli, contabilita, magazzino, CRM, MFA e utenti verificati con 0 errori bloccanti."
+      },
+      {
+        area: "ORX",
+        scenario: "Phase 8 Test Matrix",
+        evidenceDate: "2026-04-15",
+        outcome: "Passed",
+        evidence: "Tenant default e retail-labs validati; Dry Run, governance, overlay, persistence e MatevIA real smoke coperti."
+      },
+      {
+        area: "ORX + MatevIA",
+        scenario: "Live Canary E2E",
+        evidenceDate: "2026-04-17",
+        outcome: "E2E_PASS",
+        evidence: "Customer Reactivation with Margin Guard e communication workflow completati; approval queue chiusa; global write unlock bloccato come atteso."
+      },
+      {
+        area: "DEX",
+        scenario: "ORX command boundary",
+        evidenceDate: "2026-05-05",
+        outcome: "PASS",
+        evidence: "POST /api/orx/commands richiede auth; token errati respinti; comando valido rifiutato in sicurezza se manca lo stato macchina."
+      },
+      {
+        area: "DEX + ORX",
+        scenario: "Safe rejection su comando macchina",
+        evidenceDate: "2026-05-05",
+        outcome: "PASS",
+        evidence: "StopMachine su cnc-03 ricevuto da DEX e respinto con reason Machine state is unavailable; nessuna esecuzione cieca."
+      },
+      {
+        area: "ORX",
+        scenario: "Tenant learning isolation e Audit Trail",
+        evidenceDate: "2026-04-08",
+        outcome: "PASS",
+        evidence: "Dry Run completato, learning signals tenant-scoped e audit events registrati senza ERP write."
+      },
+      {
+        area: "ORX",
+        scenario: "Overlay persistence guardrail",
+        evidenceDate: "2026-04-08",
+        outcome: "Guarded",
+        evidence: "Overlay request persistita; activation blocked; write execution non sbloccata."
+      },
+      {
+        area: "ENX",
+        scenario: "Energy context demo readiness",
+        evidenceDate: "Workspace docs",
+        outcome: "Ready for demo",
+        evidence: "Health, current state, ORX context, constraints e speedometer definiti; ENX resta advisory e non espone comandi macchina."
+      }
+    ],
+    readiness: [
+      "Pronto per demo guidata con MatevIA, ORX, DEX, ENX e AI Layer.",
+      "Governance ORX verificata con approval, Dry Run, Live Canary e Audit Trail.",
+      "DEX confermato come unico boundary per validazione e safety OT.",
+      "ENX disponibile come contesto energetico advisory per pianificazione ORX.",
+      "AI Layer/ECO pronto come demo UI statica per explainability e timeline cross-layer."
+    ],
+    guardrails: [
+      "Live ERP writes restano protetti da write guard.",
+      "Le azioni con impatto economico richiedono approval.",
+      "ORX non riceve payload raw OT/Alleantia in produzione.",
+      "DEX rifiuta in sicurezza comandi senza stato macchina disponibile.",
+      "ENX non decide azioni macchina e non sostituisce DEX.",
+      "ECO spiega e correla evidenze, senza approvare, validare o mutare stati operativi."
+    ],
+    sources: [
+      "SELLALAB_ECOSYSTEM_EVIDENCE.md",
+      "TEST_ESITI_ORX_MATEVIA_EMAIL.md",
+      "DEX/docs/TEST_LOG.md",
+      "ORX/artifacts/test-matrix/phase8-test-matrix-summary.json",
+      "MatevIA_new/artifacts/test-ready/orx-matevia-live-e2e-pass-20260417.json"
+    ]
+  },
   overview: {
     title: "Architettura Completa dell'Ecosistema MatevIA",
     description: "MatevIA unifica intelligenza, governance, execution, contesto energetico e supervisione AI in un unico ecosistema di orchestrazione enterprise governance-first.",
