@@ -15,9 +15,9 @@ if (!password) {
 
 const content = {
   hero: {
-    kicker: "Riservato / Accesso riservato a partner e investitori",
+    kicker: "Accesso riservato a partner e investitori",
     title: "MatevIA Ecosystem - Area Riservata",
-    description: "Questa area riservata contiene architettura interna dell'ecosistema, evidenze di governance, flussi di validazione e materiale dimostrativo per partner e investitori selezionati."
+    description: "Benvenuto nell'area dedicata all'approfondimento dell'ecosistema MatevIA. Qui sono raccolte l'architettura completa della piattaforma, le evidenze di governance, le validazioni end-to-end, i risultati dei test operativi e le dimostrazioni che illustrano come MatevIA unifica intelligence, governance ed esecuzione in un unico ecosistema di orchestrazione enterprise. Questo materiale e classificato come riservato ed e destinato esclusivamente alla valutazione tecnica, operativa e strategica della soluzione."
   },
   origins: {
     title: "Le Origini di MatevIA",

@@ -235,6 +235,16 @@ footer a:hover{text-decoration:underline}
   flex-direction:column;
   justify-content:center;
 }
+.ecosystem-login-intro p{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.62;
+}
+.ecosystem-login-intro p:first-child{
+  color:#dff7fb;
+  font-weight:700;
+}
 .ecosystem-kicker{
   margin:0 0 8px;
   color:#a5f3fc;
