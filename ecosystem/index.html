@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MatevIA Ecosystem | Area Riservata</title>
+<meta name="description" content="Area riservata MatevIA Ecosystem per partner, investitori e revisori autorizzati.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0f172a">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body class="ecosystem-page">
+<a class="skip-link" href="#main-content">Vai al contenuto principale</a>
+<main id="main-content" class="site-wrap" tabindex="-1">
+  <header role="banner">
+    <nav class="top-nav" aria-label="Navigazione principale">
+      <div class="brand-wrap">
+        <img class="brand-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA">
+        <div class="brand">MatevIA <small>Area Riservata Ecosystem</small></div>
+      </div>
+      <div class="nav-links">
+        <a href="/index.html">Inizio</a>
+        <a href="/piattaforma-ai.html">Piattaforma AI</a>
+        <a href="/orx.html">ORX</a>
+        <a href="/schermate-reali.html">Schermate Reali</a>
+        <a class="active" aria-current="page" href="/ecosystem/">Area Riservata</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="ecosystem-login-shell reveal" data-ecosystem-login>
+    <div class="ecosystem-login-copy">
+      <p class="ecosystem-kicker">Riservato / Accesso riservato a partner e investitori</p>
+      <h1>MatevIA Ecosystem - Area Riservata</h1>
+      <p class="lead">Questa area contiene architettura interna dell'ecosistema, validazioni di governance, flussi di validazione e materiale dimostrativo per partner e investitori selezionati.</p>
+    </div>
+    <form class="ecosystem-login-form" data-ecosystem-login-form>
+      <label for="ecosystem-password">Password area riservata</label>
+      <input id="ecosystem-password" name="password" type="password" autocomplete="current-password" placeholder="Inserisci la password" required>
+      <button class="btn primary" type="submit">Accedi</button>
+      <p class="ecosystem-error" data-ecosystem-error role="alert" aria-live="polite"></p>
+      <p class="muted ecosystem-auth-note">Sessione temporanea con timeout automatico. La password non viene salvata nei cookie.</p>
+    </form>
+  </section>
+
+  <section class="ecosystem-private" data-ecosystem-private hidden>
+    <div class="ecosystem-private-top">
+      <p class="ecosystem-kicker">Riservato / Accesso riservato a partner e investitori</p>
+      <button class="btn ecosystem-logout" type="button" data-ecosystem-logout>Esci</button>
+    </div>
+    <div data-ecosystem-content></div>
+  </section>
+
+  <footer role="contentinfo">
+    <span>MatevIA - Area Riservata Ecosystem</span>
+    <span>
+      <a href="/index.html">Inizio</a> |
+      <a href="/privacy.html">Privacy</a> |
+      <a href="/cookie-policy.html">Cookie</a> |
+      <a href="/termini-condizioni.html">Termini</a>
+    </span>
+  </footer>
+</main>
+<script src="/private-content/ecosystem-auth.generated.js" defer></script>
+<script src="/assets/ecosystem.js" defer></script>
+</body>
+</html>

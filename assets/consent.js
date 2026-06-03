@@ -50,7 +50,7 @@
       '<div class="cookie-consent-actions">' +
       '<button type="button" class="cookie-btn cookie-btn-primary" data-consent-accept>Accetta</button>' +
       '<button type="button" class="cookie-btn" data-consent-deny>Rifiuta</button>' +
-      '<a class="cookie-link" href="/cookie-policy.html">Cookie policy</a>' +
+      '<a class="cookie-link" href="/cookie-policy.html">Informativa cookie</a>' +
       '</div>';
 
     var acceptBtn = banner.querySelector('[data-consent-accept]');

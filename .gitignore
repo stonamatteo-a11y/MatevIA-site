@@ -1,0 +1,5 @@
+.codex/
+runtime-tools/*
+!runtime-tools/
+!runtime-tools/generate-ecosystem-auth.mjs
+images/MatevIA_Ecosistem.mp4
