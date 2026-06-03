@@ -16,7 +16,8 @@
     video: [
       "/images/MatevIA_Ecosistem.mp4",
       "/images/MatevIA_Ecosistem.webm",
-      "/images/MatevIA_Ecosistem.mov"
+      "/images/MatevIA_Ecosistem.mov",
+      "https://github.com/stonamatteo-a11y/MatevIA-site/releases/download/ecosystem-media-v1/MatevIA_Ecosistem.mp4"
     ]
   };
 
