@@ -19,6 +19,42 @@ const content = {
     title: "MatevIA Ecosystem - Area Riservata",
     description: "Questa area riservata contiene architettura interna dell'ecosistema, evidenze di governance, flussi di validazione e materiale dimostrativo per partner e investitori selezionati."
   },
+  origins: {
+    title: "Le Origini di MatevIA",
+    intro: "MatevIA nasce da un'esperienza reale.",
+    sections: [
+      {
+        title: "",
+        paragraphs: [
+          "Per anni abbiamo vissuto direttamente le complessita operative delle aziende e dei sistemi industriali, osservando come persone, processi e tecnologie fossero spesso gestiti da strumenti separati, incapaci di collaborare in modo intelligente e governato.",
+          "Ogni decisione richiedeva coordinamento manuale. Ogni informazione era distribuita tra sistemi diversi. Ogni processo dipendeva da continui interventi umani per collegare strategia, operativita ed esecuzione.",
+          "Da questa esperienza e nata una domanda:",
+          "E possibile costruire un sistema che non si limiti a registrare dati o automatizzare attivita, ma che sia in grado di comprendere obiettivi, applicare governance, orchestrare processi e coordinare l'esecuzione in modo controllato?",
+          "MatevIA nasce per rispondere a questa domanda."
+        ]
+      },
+      {
+        title: "La Nostra Visione",
+        paragraphs: [
+          "Crediamo che il futuro delle imprese non sia fatto da software isolati, ma da ecosistemi intelligenti capaci di collaborare.",
+          "ERP, MES, sistemi OT, IoT, piattaforme energetiche e Intelligenza Artificiale non devono essere strumenti separati, ma componenti di un unico sistema governabile.",
+          "La nostra visione e costruire l'infrastruttura di orchestrazione che unisce intelligence, governance ed esecuzione.",
+          "Un ecosistema in cui gli obiettivi si trasformano in decisioni, le decisioni in piani operativi, i piani in azioni controllate e ogni risultato diventa conoscenza utile per migliorare continuamente.",
+          "Non sostituire le persone, ma amplificarne le capacita. Non eliminare il controllo, ma renderlo scalabile. Non aumentare la complessita, ma coordinarla."
+        ]
+      },
+      {
+        title: "Lo Sguardo al Futuro",
+        paragraphs: [
+          "Immaginiamo un futuro in cui le organizzazioni possano operare con livelli crescenti di autonomia senza rinunciare a governance, sicurezza e responsabilita.",
+          "Un futuro in cui ogni sistema aziendale e industriale possa collaborare all'interno di un ecosistema comune.",
+          "MatevIA, ORX, DEX ed ENX rappresentano i primi passi di questa visione.",
+          "Il nostro obiettivo e costruire una nuova generazione di infrastrutture enterprise: sistemi capaci di comprendere il contesto, supportare le decisioni, orchestrare l'operativita e generare valore misurabile nel tempo."
+        ],
+        closing: ["Non un semplice software.", "Un ecosistema di orchestrazione per l'impresa del futuro."]
+      }
+    ]
+  },
   overview: {
     title: "Architettura Completa dell'Ecosistema MatevIA",
     description: "MatevIA unifica intelligenza, governance, execution, contesto energetico e supervisione AI in un unico ecosistema di orchestrazione enterprise governance-first.",
