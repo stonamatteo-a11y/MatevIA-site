@@ -1,0 +1,12 @@
+MatevIA Private Hub — immagini prodotto
+
+Copia questi cinque file nella cartella del repository:
+
+F:\Progetti\matevia-site\images\product\
+
+Nomi richiesti:
+- orx-command-center.webp
+- ai-layer-eco.webp
+- matevia-core-dashboard.webp
+- dex-production.webp
+- enx-energy-context.webp
