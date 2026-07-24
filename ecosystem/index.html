@@ -6,67 +6,132 @@
 <title>MatevIA Ecosystem | Area Riservata</title>
 <meta name="description" content="Area riservata MatevIA Ecosystem per partner, investitori e revisori autorizzati.">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0f172a">
+<meta name="theme-color" content="#05070b">
 <link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/ecosystem-v2.css">
+<link rel="stylesheet" href="/assets/ecosystem-v3.css">
+<link rel="stylesheet" href="/assets/ecosystem-v5.css">
+<link rel="stylesheet" href="/assets/ecosystem-products.css">
+<link rel="stylesheet" href="/assets/ecosystem-cleanup.css">
+<link rel="stylesheet" href="/assets/workflow-interactions.css">
+<link rel="stylesheet" href="/assets/product-live-overlays.css">
+<link rel="stylesheet" href="/assets/private-hub-value.css">
+<link rel="stylesheet" href="/assets/hero-pulse.css">
 <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
 <body class="ecosystem-page">
 <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
-<main id="main-content" class="site-wrap" tabindex="-1">
-  <header role="banner">
-    <nav class="top-nav" aria-label="Navigazione principale">
-      <div class="brand-wrap">
-        <img class="brand-logo" src="/assets/logo-matevia.png" alt="Logo MatevIA">
-        <div class="brand">MatevIA <small>Area Riservata Ecosystem</small></div>
+<main id="main-content" tabindex="-1">
+  <section class="private-hub-login" data-ecosystem-login>
+    <div class="private-hub-hero">
+      <p class="private-hub-eyebrow">MatevIA Private Hub</p>
+      <div class="private-hub-brand">
+        <img src="/assets/logo-matevia.png" alt="Logo MatevIA">
+        <h1 class="private-hub-wordmark">Matev<span class="ia">IA</span></h1>
       </div>
-      <div class="nav-links">
-        <a href="/index.html">Inizio</a>
-        <a href="/piattaforma-ai.html">Piattaforma AI</a>
-        <a href="/orx.html">ORX</a>
-        <a href="/schermate-reali.html">Schermate Reali</a>
-        <a class="active" aria-current="page" href="/ecosystem/">Area Riservata</a>
-      </div>
-    </nav>
-  </header>
-
-  <section class="ecosystem-login-shell reveal" data-ecosystem-login>
-    <div class="ecosystem-login-copy">
-      <p class="ecosystem-kicker">Accesso riservato a partner e investitori</p>
-      <h1>MatevIA Ecosystem - Area Riservata</h1>
-      <div class="ecosystem-login-intro">
-        <p>Benvenuto nell'area dedicata all'approfondimento dell'ecosistema MatevIA.</p>
-        <p>Qui sono raccolte l'architettura completa della piattaforma, le evidenze di governance, le validazioni end-to-end, i risultati dei test operativi e le dimostrazioni che illustrano come MatevIA unifica intelligence, governance ed esecuzione in un unico ecosistema di orchestrazione enterprise.</p>
-        <p>Questo materiale e classificato come riservato ed e destinato esclusivamente alla valutazione tecnica, operativa e strategica della soluzione.</p>
+      <h2 class="private-hub-title">
+        <span>Una sola governance.</span>
+        <span>Un unico ecosistema.</span>
+        <span class="accent">Infinite possibilità.</span>
+      </h2>
+      <p class="private-hub-description">Una vista riservata sull'architettura, i moduli operativi e le dimostrazioni reali dell'ecosistema MatevIA.</p>
+      <div class="private-hub-signals" aria-label="Caratteristiche principali">
+        <span class="private-hub-signal">ORX al centro</span>
+        <span class="private-hub-signal">AI governata</span>
+        <span class="private-hub-signal">Architettura modulare</span>
+        <span class="private-hub-signal">Installazione on-premise</span>
       </div>
     </div>
-    <form class="ecosystem-login-form" data-ecosystem-login-form>
-      <label for="ecosystem-password">Password area riservata</label>
-      <input id="ecosystem-password" name="password" type="password" autocomplete="current-password" placeholder="Inserisci la password" required>
-      <button class="btn primary" type="submit">Accedi</button>
-      <p class="ecosystem-error" data-ecosystem-error role="alert" aria-live="polite"></p>
-      <p class="muted ecosystem-auth-note">Sessione temporanea con timeout automatico. La password non viene salvata nei cookie.</p>
-    </form>
+    <aside class="private-hub-access" aria-label="Accesso area riservata">
+      <form class="private-hub-access-card" data-ecosystem-login-form>
+        <h2>Accesso riservato</h2>
+        <p>Inserisci la password autorizzata per entrare nel MatevIA Private Hub.</p>
+        <label for="ecosystem-password">Password</label>
+        <input id="ecosystem-password" name="password" type="password" autocomplete="current-password" placeholder="Inserisci la password" required>
+        <button class="btn primary" type="submit">Entra nel Private Hub</button>
+        <p class="ecosystem-error" data-ecosystem-error role="alert" aria-live="polite"></p>
+        <p class="muted ecosystem-auth-note">Sessione temporanea con timeout automatico. La password non viene salvata nei cookie.</p>
+        <p class="private-hub-classification">Contenuti riservati a soggetti autorizzati</p>
+      </form>
+    </aside>
   </section>
 
   <section class="ecosystem-private" data-ecosystem-private hidden>
-    <div class="ecosystem-private-top">
-      <p class="ecosystem-kicker">Riservato / Accesso riservato a partner e investitori</p>
+    <div class="ecosystem-private-top private-hub-toolbar">
+      <div class="private-hub-toolbar-brand">
+        <img src="/assets/logo-matevia.png" alt="Logo MatevIA">
+        <span>Matev<span>IA</span> Private Hub</span>
+      </div>
       <button class="btn ecosystem-logout" type="button" data-ecosystem-logout>Esci</button>
     </div>
-    <div data-ecosystem-content></div>
-  </section>
 
-  <footer role="contentinfo">
-    <span>MatevIA - Area Riservata Ecosystem</span>
-    <span>
-      <a href="/index.html">Inizio</a> |
-      <a href="/privacy.html">Privacy</a> |
-      <a href="/cookie-policy.html">Cookie</a> |
-      <a href="/termini-condizioni.html">Termini</a>
-    </span>
-  </footer>
+    <section class="private-hub-intro" aria-labelledby="private-hub-intro-title">
+      <div class="private-hub-intro-copy">
+        <p class="private-hub-eyebrow">Dentro l'ecosistema</p>
+        <h1 id="private-hub-intro-title">Sistemi, AI e processi coordinati in un unico ambiente governato.</h1>
+        <p>ORX mantiene l'autorità decisionale. AI Layer e AI Cognitive costruiscono capacità e contesto. I moduli operativi trasformano soltanto le decisioni autorizzate in azioni controllate.</p>
+        <div class="private-hub-signals">
+          <span class="private-hub-signal">Server fisico aziendale</span>
+          <span class="private-hub-signal">Ambiente isolato</span>
+          <span class="private-hub-signal">Dati nel perimetro del cliente</span>
+        </div>
+      </div>
+      <div class="private-hub-demo">
+        <p class="private-hub-demo-label">Demo MatevIA</p>
+        <video controls preload="metadata" poster="/assets/logo-matevia.png">
+          <source src="/images/MatevIA_Ecosistem.mp4" type="video/mp4">
+          <source src="/images/MatevIA_Ecosistem.webm" type="video/webm">
+          Il browser non supporta la riproduzione video.
+        </video>
+      </div>
+    </section>
+
+    <section class="private-hub-origins" aria-labelledby="private-hub-origins-title">
+      <div class="origins-heading">
+        <div>
+          <p class="private-hub-eyebrow">Le origini di MatevIA</p>
+          <h2 id="private-hub-origins-title">Nasce da un problema vissuto, non da una tecnologia da collocare.</h2>
+        </div>
+        <p class="origins-lead">Nelle imprese, strumenti validi continuano spesso a lavorare come domini separati. Il problema non è la mancanza di software: è l'assenza di un contesto condiviso e di una governance capace di coordinarlo.</p>
+      </div>
+      <div class="origins-story">
+        <article><span>01</span><h3>La complessità reale</h3><p>ERP, MES, documenti, macchine, dati energetici e conoscenza delle persone sono distribuiti. Le decisioni richiedono ricostruzioni manuali, passaggi informali e continui interventi di coordinamento.</p></article>
+        <article><span>02</span><h3>La domanda</h3><p>È possibile collegare obiettivi, contesto, regole, approvazioni ed esecuzione senza sostituire ciò che già funziona e senza cedere il controllo all'AI?</p></article>
+        <article><span>03</span><h3>La risposta</h3><p>MatevIA introduce un livello di orchestrazione governance-first: comprende il contesto, applica responsabilità e policy, coordina i sistemi e rende ogni decisione ricostruibile.</p></article>
+      </div>
+      <blockquote>Non un'altra applicazione isolata. Un ecosistema governato che amplifica le capacità delle persone e valorizza gli investimenti esistenti.</blockquote>
+    </section>
+
+    <section class="private-hub-ecosystem" aria-labelledby="private-hub-ecosystem-title">
+      <div class="private-hub-ecosystem-grid">
+        <div class="private-hub-integration-copy">
+          <p class="private-hub-eyebrow">Integra ciò che esiste</p>
+          <h2 id="private-hub-ecosystem-title">I sistemi aziendali diventano parte di un unico contesto operativo.</h2>
+          <p>ERP, MES, documenti, database, API, PLC e sistemi energetici possono essere collegati senza imporre la sostituzione degli investimenti esistenti.</p>
+          <div class="private-hub-integration-highlight">MatevIA coordina ciò che l'azienda possiede già e attiva nuovi layer soltanto quando servono.</div>
+        </div>
+        <div class="private-hub-system-map" aria-label="Mappa dei sistemi integrabili con ORX">
+          <div class="private-hub-system-center"><div><strong>ORX</strong><span>Governance centrale</span></div></div>
+          <div class="private-hub-system-node node-erp"><span class="node-icon">▦</span><strong>ERP</strong><small>Gestionali esistenti</small></div>
+          <div class="private-hub-system-node node-docs"><span class="node-icon">▤</span><strong>Documenti</strong><small>Ordini e procedure</small></div>
+          <div class="private-hub-system-node node-mes"><span class="node-icon">⚙</span><strong>MES</strong><small>Produzione</small></div>
+          <div class="private-hub-system-node node-energy"><span class="node-icon">⌁</span><strong>Energia</strong><small>Consumi e vincoli</small></div>
+          <div class="private-hub-system-node node-database"><span class="node-icon">◫</span><strong>Database</strong><small>Dati aziendali</small></div>
+          <div class="private-hub-system-node node-api"><span class="node-icon">↔</span><strong>API</strong><small>Servizi e integrazioni</small></div>
+          <div class="private-hub-system-node node-plc"><span class="node-icon">▣</span><strong>PLC e IoT</strong><small>Macchine e sensori</small></div>
+        </div>
+      </div>
+    </section>
+
+    <div data-private-hub-dynamic></div>
+    <div data-ecosystem-content hidden></div>
+  </section>
 </main>
 <script src="/private-content/ecosystem-auth.generated.js" defer></script>
 <script src="/assets/ecosystem.js" defer></script>
+<script src="/assets/ecosystem-showcase.js" defer></script>
+<script src="/assets/workflow-interactions.js" defer></script>
+<script src="/assets/product-live-overlays.js" defer></script>
+<script src="/assets/private-hub-value.js" defer></script>
 </body>
 </html>

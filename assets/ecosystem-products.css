@@ -1,0 +1,94 @@
+.private-hub-products{max-width:1500px;margin:0 auto;padding:96px 0 112px;border-top:1px solid rgba(126,164,255,.14)}
+.product-showcase-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.55fr);gap:34px;align-items:end;margin-bottom:46px}
+.product-showcase-heading .private-hub-section-heading{margin-bottom:0}
+.product-showcase-note{margin:0;padding:20px 22px;border:1px solid rgba(126,164,255,.18);border-radius:18px;background:rgba(10,17,30,.66);color:var(--hub-muted);line-height:1.65}
+.product-module-list{display:grid;gap:26px}
+.product-module{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.45fr);gap:26px;align-items:stretch;padding:18px;border:1px solid rgba(126,164,255,.17);border-radius:26px;background:linear-gradient(155deg,rgba(15,24,42,.84),rgba(7,12,21,.94));box-shadow:0 28px 72px rgba(0,0,0,.22)}
+.product-module:nth-child(even){grid-template-columns:minmax(300px,.45fr) minmax(0,1.55fr)}
+.product-module:nth-child(even) .product-screen{order:2}
+.product-module-copy{padding:24px 20px;display:flex;flex-direction:column;justify-content:center}
+.product-module-label{color:var(--hub-gold);font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:700}
+.product-module-copy h3{margin:12px 0 12px;font-size:clamp(28px,3vw,44px);letter-spacing:-.035em}
+.product-module-copy p{margin:0;color:var(--hub-muted);font-size:16px;line-height:1.7}
+.product-module-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.product-module-tags span{padding:8px 11px;border:1px solid rgba(114,177,255,.18);border-radius:999px;background:rgba(43,127,255,.08);color:#bdd6fb;font-size:11px}
+.product-screen{position:relative;min-height:420px;border:1px solid rgba(126,164,255,.2);border-radius:19px;background:#050a13;overflow:hidden;cursor:zoom-in}
+.product-screen img{display:block;width:100%;height:100%;min-height:420px;object-fit:contain;background:#050a13}
+.product-screen::after{content:'Apri schermata';position:absolute;right:14px;bottom:14px;padding:8px 11px;border:1px solid rgba(126,164,255,.22);border-radius:999px;background:rgba(5,9,17,.82);color:#dce9ff;font-size:11px;backdrop-filter:blur(10px)}
+.product-screen.is-missing::before{content:'Screenshot da aggiungere in /images/product/';position:absolute;inset:0;display:grid;place-items:center;padding:24px;color:#8fa2c1;text-align:center;z-index:1}
+
+.cognitive-module{margin-top:28px;padding:34px;border:1px solid rgba(126,164,255,.2);border-radius:28px;background:radial-gradient(circle at 75% 42%,rgba(38,111,255,.11),transparent 38%),linear-gradient(155deg,rgba(15,24,42,.9),rgba(6,11,20,.97));overflow:hidden}
+.cognitive-layout{display:grid;grid-template-columns:minmax(300px,.52fr) minmax(0,1.48fr);gap:42px;align-items:center}
+.cognitive-copy{padding:22px 10px 22px 8px}
+.cognitive-status{margin-top:28px;padding:18px 19px;border-left:2px solid #3f8cff;background:linear-gradient(90deg,rgba(43,127,255,.11),rgba(43,127,255,.025));border-radius:0 14px 14px 0;min-height:104px}
+.cognitive-status span{display:block;color:#dceaff;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.cognitive-status p{margin:8px 0 0;font-size:14px;line-height:1.55;color:#aebfda}
+.cognitive-visual{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:center;padding:26px;border:1px solid rgba(126,164,255,.17);border-radius:24px;background:linear-gradient(180deg,rgba(5,11,21,.95),rgba(8,15,28,.86));box-shadow:inset 0 1px 0 rgba(255,255,255,.025);min-height:430px}
+.cognitive-visual::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(87,132,205,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(87,132,205,.045) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to bottom,transparent,black 15%,black 85%,transparent);pointer-events:none}
+.cognitive-sources{grid-column:1/-1;display:flex;justify-content:center;flex-wrap:wrap;gap:9px;position:relative;z-index:1}
+.cognitive-sources span{padding:8px 12px;border:1px solid rgba(126,164,255,.14);border-radius:999px;background:rgba(15,24,40,.78);color:#8fa8cc;font-size:11px;letter-spacing:.05em}
+.cognitive-source-line{grid-column:1/-1;position:relative;height:30px;margin:-2px 0 -5px}
+.cognitive-source-line::before{content:'';position:absolute;left:8%;right:8%;top:4px;height:1px;background:linear-gradient(90deg,transparent,rgba(79,143,255,.35),transparent)}
+.cognitive-source-line::after{content:'';position:absolute;left:50%;top:4px;width:1px;height:26px;background:linear-gradient(rgba(79,143,255,.35),rgba(79,143,255,.08))}
+.cognitive-source-line i{position:absolute;top:0;left:10%;width:5px;height:5px;border-radius:50%;background:#70b2ff;opacity:0;box-shadow:0 0 12px #438cff}
+.cognitive-source-line.is-active i{animation:cognitive-source-particle 2s ease-in-out infinite}
+.cognitive-source-line.is-active i:nth-child(2){animation-delay:.45s}.cognitive-source-line.is-active i:nth-child(3){animation-delay:.9s}
+.cognitive-stage{position:relative;z-index:1;min-height:146px;padding:18px 16px;border:1px solid rgba(126,164,255,.15);border-radius:18px;background:linear-gradient(180deg,rgba(14,24,42,.92),rgba(8,15,27,.94));display:flex;flex-direction:column;justify-content:center;transition:border-color .45s ease,box-shadow .45s ease,background .45s ease,transform .45s ease,opacity .45s ease;opacity:.58}
+.cognitive-stage small{color:#7287a8;font-size:10px;letter-spacing:.13em;text-transform:uppercase;transition:color .45s ease}
+.cognitive-stage strong{margin-top:9px;font-size:15px;color:#d9e6fb;line-height:1.25}
+.cognitive-stage span{margin-top:9px;color:#7890b2;font-size:11px;line-height:1.45}
+.cognitive-stage.is-active{opacity:1;transform:translateY(-4px);border-color:rgba(84,154,255,.82);background:linear-gradient(180deg,rgba(25,55,105,.86),rgba(9,23,44,.96));box-shadow:0 0 0 1px rgba(82,151,255,.16),0 0 28px rgba(46,118,255,.35),inset 0 0 32px rgba(39,111,255,.09)}
+.cognitive-stage.is-active small{color:#83bbff}.cognitive-stage.is-active strong{color:#fff}.cognitive-stage.is-active span{color:#b8d0ef}
+.cognitive-stage.is-complete{opacity:.9;border-color:rgba(111,177,255,.34);background:linear-gradient(180deg,rgba(17,37,68,.82),rgba(8,18,34,.94))}
+.cognitive-connector{display:none}
+.cognitive-orx-link{grid-column:1/-1;position:relative;height:36px;margin:-1px 0 -3px}
+.cognitive-orx-link::before{content:'';position:absolute;left:50%;top:0;width:1px;height:100%;background:rgba(202,164,87,.19);transition:background .35s ease,box-shadow .35s ease}
+.cognitive-orx-link i{position:absolute;left:calc(50% - 3px);top:0;width:7px;height:7px;border-radius:50%;background:#e8bd64;opacity:0;box-shadow:0 0 16px rgba(232,189,100,.9)}
+.cognitive-orx-link.is-active::before{background:linear-gradient(#65aaff,#e7ba60);box-shadow:0 0 18px rgba(86,151,255,.45)}
+.cognitive-orx-link.is-active i{opacity:1;animation:cognitive-orx-particle 1s ease-in forwards}
+.cognitive-orx{grid-column:2/5;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:116px;padding:18px;border:1px solid rgba(208,170,94,.28);border-radius:20px;background:radial-gradient(circle at 50% 25%,rgba(210,167,81,.12),transparent 60%),rgba(14,19,29,.94);text-align:center;transition:border-color .4s ease,box-shadow .4s ease,transform .4s ease}
+.cognitive-orx small{color:#a88a52;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.cognitive-orx strong{margin-top:5px;color:#f0d28d;font-size:30px;letter-spacing:.04em}
+.cognitive-orx span{margin-top:5px;color:#8fa0ba;font-size:11px}
+.cognitive-orx.is-active{transform:scale(1.025);border-color:rgba(234,194,105,.82);box-shadow:0 0 34px rgba(221,172,73,.26),inset 0 0 32px rgba(226,181,80,.08);animation:cognitive-orx-pulse 1s ease-out}
+
+.product-lightbox{position:fixed;inset:0;z-index:1000;display:none;place-items:center;padding:28px;background:rgba(2,5,10,.9);backdrop-filter:blur(14px)}
+.product-lightbox.is-open{display:grid}
+.product-lightbox img{max-width:min(96vw,1800px);max-height:90vh;border:1px solid rgba(126,164,255,.24);border-radius:18px;box-shadow:0 34px 120px rgba(0,0,0,.58);background:#050a13}
+.product-lightbox button{position:fixed;right:28px;top:24px;width:44px;height:44px;border:1px solid rgba(126,164,255,.25);border-radius:50%;background:#0b1424;color:#fff;font-size:24px;cursor:pointer}
+
+@keyframes cognitive-source-particle{0%{left:10%;top:0;opacity:0}18%{opacity:1}55%{left:50%;top:0;opacity:1}100%{left:50%;top:27px;opacity:0}}
+@keyframes cognitive-orx-particle{0%{top:0;opacity:0}20%{opacity:1}100%{top:30px;opacity:0}}
+@keyframes cognitive-orx-pulse{0%{transform:scale(1)}45%{transform:scale(1.035)}100%{transform:scale(1.025)}}
+
+@media(max-width:1180px){
+  .cognitive-layout{grid-template-columns:1fr}
+  .cognitive-copy{padding:10px 4px}
+}
+@media(max-width:1050px){
+  .product-module,.product-module:nth-child(even){grid-template-columns:1fr}
+  .product-module:nth-child(even) .product-screen{order:0}
+  .product-screen,.product-screen img{min-height:320px}
+  .cognitive-visual{grid-template-columns:1fr;gap:10px;min-height:0}
+  .cognitive-sources,.cognitive-source-line,.cognitive-orx-link,.cognitive-orx{grid-column:1}
+  .cognitive-stage{min-height:108px}
+  .cognitive-connector{display:block;position:relative;height:18px}
+  .cognitive-connector::before{content:'';position:absolute;left:50%;top:0;width:1px;height:100%;background:rgba(80,146,255,.22)}
+  .cognitive-connector i{position:absolute;left:calc(50% - 3px);top:0;width:6px;height:6px;border-radius:50%;background:#69adff;opacity:0;box-shadow:0 0 12px #438cff}
+  .cognitive-connector.is-active::before{background:linear-gradient(#65aaff,rgba(101,170,255,.15));box-shadow:0 0 12px rgba(65,139,255,.45)}
+  .cognitive-connector.is-active i{opacity:1;animation:cognitive-mobile-particle 2s ease-in forwards}
+}
+@keyframes cognitive-mobile-particle{0%{top:0;opacity:0}20%{opacity:1}100%{top:14px;opacity:0}}
+@media(max-width:760px){
+  .product-showcase-heading{grid-template-columns:1fr}
+  .product-module{padding:12px}
+  .product-module-copy{padding:18px 10px}
+  .product-screen,.product-screen img{min-height:220px}
+  .cognitive-module{padding:20px}
+  .cognitive-visual{padding:18px}
+  .cognitive-sources{justify-content:flex-start}
+  .cognitive-orx{min-height:104px}
+}
+@media(prefers-reduced-motion:reduce){
+  .cognitive-source-line i,.cognitive-orx-link i,.cognitive-orx,.cognitive-stage,.cognitive-connector i{animation:none!important;transition:none!important}
+}
