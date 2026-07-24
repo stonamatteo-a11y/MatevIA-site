@@ -37,6 +37,15 @@
   outline-offset: 3px;
 }
 
+.private-hub-home-link-fixed {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 1200;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
 .private-hub-origins {
   max-width: 1500px;
   margin: 0 auto;
@@ -134,6 +143,11 @@
 }
 
 @media (max-width: 700px) {
+  .private-hub-home-link-fixed {
+    top: 12px;
+    left: 12px;
+  }
+
   .private-hub-home-link {
     width: 42px;
     min-width: 42px;
