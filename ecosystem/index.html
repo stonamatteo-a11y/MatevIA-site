@@ -10,7 +10,9 @@
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/ecosystem-v2.css">
 <link rel="stylesheet" href="/assets/ecosystem-v3.css">
-<link rel="stylesheet" href="/assets/ecosystem-v4.css">
+<link rel="stylesheet" href="/assets/ecosystem-v5.css">
+<link rel="stylesheet" href="/assets/ecosystem-products.css">
+<link rel="stylesheet" href="/assets/ecosystem-cleanup.css">
 <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
 <body class="ecosystem-page">
@@ -23,19 +25,12 @@
         <img src="/assets/logo-matevia.png" alt="Logo MatevIA">
         <h1 class="private-hub-wordmark">Matev<span class="ia">IA</span></h1>
       </div>
-
       <h2 class="private-hub-title">
         <span>Una sola governance.</span>
         <span>Un unico ecosistema.</span>
         <span class="accent">Infinite possibilità.</span>
       </h2>
-
-      <p class="private-hub-description">
-        Accedi all'area dedicata alla visione completa dell'ecosistema MatevIA,
-        alla sua architettura e alle dimostrazioni riservate per partner,
-        investitori e revisori autorizzati.
-      </p>
-
+      <p class="private-hub-description">Una vista riservata sull'architettura, i moduli operativi e le dimostrazioni reali dell'ecosistema MatevIA.</p>
       <div class="private-hub-signals" aria-label="Caratteristiche principali">
         <span class="private-hub-signal">ORX al centro</span>
         <span class="private-hub-signal">AI governata</span>
@@ -43,16 +38,13 @@
         <span class="private-hub-signal">Installazione on-premise</span>
       </div>
     </div>
-
     <aside class="private-hub-access" aria-label="Accesso area riservata">
       <form class="private-hub-access-card" data-ecosystem-login-form>
         <h2>Accesso riservato</h2>
         <p>Inserisci la password autorizzata per entrare nel MatevIA Private Hub.</p>
-
         <label for="ecosystem-password">Password</label>
         <input id="ecosystem-password" name="password" type="password" autocomplete="current-password" placeholder="Inserisci la password" required>
         <button class="btn primary" type="submit">Entra nel Private Hub</button>
-
         <p class="ecosystem-error" data-ecosystem-error role="alert" aria-live="polite"></p>
         <p class="muted ecosystem-auth-note">Sessione temporanea con timeout automatico. La password non viene salvata nei cookie.</p>
         <p class="private-hub-classification">Contenuti riservati a soggetti autorizzati</p>
@@ -72,18 +64,14 @@
     <section class="private-hub-intro" aria-labelledby="private-hub-intro-title">
       <div class="private-hub-intro-copy">
         <p class="private-hub-eyebrow">Dentro l'ecosistema</p>
-        <h1 id="private-hub-intro-title">MatevIA coordina sistemi, AI e processi in un unico ambiente governato.</h1>
-        <p>
-          Il nucleo della piattaforma integra ORX, AI Layer, AI Cognitive e MatevIA Console.
-          I sistemi già presenti in azienda possono essere collegati senza sostituire gli investimenti esistenti.
-        </p>
+        <h1 id="private-hub-intro-title">Sistemi, AI e processi coordinati in un unico ambiente governato.</h1>
+        <p>ORX mantiene l'autorità decisionale. AI Layer e AI Cognitive costruiscono capacità e contesto. I moduli operativi trasformano soltanto le decisioni autorizzate in azioni controllate.</p>
         <div class="private-hub-signals">
           <span class="private-hub-signal">Server fisico aziendale</span>
           <span class="private-hub-signal">Ambiente isolato</span>
           <span class="private-hub-signal">Dati nel perimetro del cliente</span>
         </div>
       </div>
-
       <div class="private-hub-demo">
         <p class="private-hub-demo-label">Demo MatevIA</p>
         <video controls preload="metadata" poster="/assets/logo-matevia.png">
@@ -94,143 +82,45 @@
       </div>
     </section>
 
-    <section class="private-hub-core" aria-labelledby="private-hub-core-title">
-      <div class="private-hub-section-heading">
-        <p class="private-hub-eyebrow">Installazione minima</p>
-        <h2 id="private-hub-core-title">Il nucleo MatevIA</h2>
-        <p>Quattro responsabilità distinte. Un solo sistema coordinato.</p>
+    <section class="private-hub-origins" aria-labelledby="private-hub-origins-title">
+      <div class="origins-heading">
+        <div>
+          <p class="private-hub-eyebrow">Le origini di MatevIA</p>
+          <h2 id="private-hub-origins-title">Nasce da un problema vissuto, non da una tecnologia da collocare.</h2>
+        </div>
+        <p class="origins-lead">Nelle imprese, strumenti validi continuano spesso a lavorare come domini separati. Il problema non è la mancanza di software: è l'assenza di un contesto condiviso e di una governance capace di coordinarlo.</p>
       </div>
-
-      <div class="private-hub-core-grid">
-        <article class="private-hub-core-card is-orx">
-          <span class="private-hub-core-index">01</span>
-          <h3>ORX</h3>
-          <p>Decide, applica policy, governa approvazioni e mantiene l'autorità sul sistema.</p>
-        </article>
-        <article class="private-hub-core-card">
-          <span class="private-hub-core-index">02</span>
-          <h3>AI Layer</h3>
-          <p>Gestisce modelli, capability, routing e ciclo di vita delle AI locali.</p>
-        </article>
-        <article class="private-hub-core-card">
-          <span class="private-hub-core-index">03</span>
-          <h3>AI Cognitive</h3>
-          <p>Costruisce progressivamente il contesto industriale in Shadow Mode.</p>
-        </article>
-        <article class="private-hub-core-card">
-          <span class="private-hub-core-index">04</span>
-          <h3>MatevIA Console</h3>
-          <p>Rende visibili stato, decisioni e informazioni dichiarate da ORX.</p>
-        </article>
+      <div class="origins-story">
+        <article><span>01</span><h3>La complessità reale</h3><p>ERP, MES, documenti, macchine, dati energetici e conoscenza delle persone sono distribuiti. Le decisioni richiedono ricostruzioni manuali, passaggi informali e continui interventi di coordinamento.</p></article>
+        <article><span>02</span><h3>La domanda</h3><p>È possibile collegare obiettivi, contesto, regole, approvazioni ed esecuzione senza sostituire ciò che già funziona e senza cedere il controllo all'AI?</p></article>
+        <article><span>03</span><h3>La risposta</h3><p>MatevIA introduce un livello di orchestrazione governance-first: comprende il contesto, applica responsabilità e policy, coordina i sistemi e rende ogni decisione ricostruibile.</p></article>
       </div>
+      <blockquote>Non un'altra applicazione isolata. Un ecosistema governato che amplifica le capacità delle persone e valorizza gli investimenti esistenti.</blockquote>
     </section>
 
     <section class="private-hub-ecosystem" aria-labelledby="private-hub-ecosystem-title">
       <div class="private-hub-ecosystem-grid">
         <div class="private-hub-integration-copy">
           <p class="private-hub-eyebrow">Integra ciò che esiste</p>
-          <h2 id="private-hub-ecosystem-title">I sistemi aziendali diventano parte di un unico ambiente governato.</h2>
-          <p>
-            ERP, MES, documenti, database, API, PLC e sistemi energetici possono essere collegati a ORX.
-            MatevIA non impone la sostituzione degli investimenti esistenti: li coordina in un ecosistema comune.
-          </p>
-          <div class="private-hub-integration-highlight">
-            Hai già un ERP, un MES o un sistema di controllo energetico? MatevIA è progettata per integrarli e governarli in un unico sistema.
-          </div>
+          <h2 id="private-hub-ecosystem-title">I sistemi aziendali diventano parte di un unico contesto operativo.</h2>
+          <p>ERP, MES, documenti, database, API, PLC e sistemi energetici possono essere collegati senza imporre la sostituzione degli investimenti esistenti.</p>
+          <div class="private-hub-integration-highlight">MatevIA coordina ciò che l'azienda possiede già e attiva nuovi layer soltanto quando servono.</div>
         </div>
-
         <div class="private-hub-system-map" aria-label="Mappa dei sistemi integrabili con ORX">
-          <div class="private-hub-system-center">
-            <div><strong>ORX</strong><span>Governance centrale</span></div>
-          </div>
+          <div class="private-hub-system-center"><div><strong>ORX</strong><span>Governance centrale</span></div></div>
           <div class="private-hub-system-node node-erp"><span class="node-icon">▦</span><strong>ERP</strong><small>Gestionali esistenti</small></div>
-          <div class="private-hub-system-node node-docs"><span class="node-icon">▤</span><strong>Documenti</strong><small>Ordini, procedure, contratti</small></div>
-          <div class="private-hub-system-node node-mes"><span class="node-icon">⚙</span><strong>MES</strong><small>Produzione e avanzamento</small></div>
+          <div class="private-hub-system-node node-docs"><span class="node-icon">▤</span><strong>Documenti</strong><small>Ordini e procedure</small></div>
+          <div class="private-hub-system-node node-mes"><span class="node-icon">⚙</span><strong>MES</strong><small>Produzione</small></div>
           <div class="private-hub-system-node node-energy"><span class="node-icon">⌁</span><strong>Energia</strong><small>Consumi e vincoli</small></div>
           <div class="private-hub-system-node node-database"><span class="node-icon">◫</span><strong>Database</strong><small>Dati aziendali</small></div>
           <div class="private-hub-system-node node-api"><span class="node-icon">↔</span><strong>API</strong><small>Servizi e integrazioni</small></div>
           <div class="private-hub-system-node node-plc"><span class="node-icon">▣</span><strong>PLC e IoT</strong><small>Macchine e sensori</small></div>
         </div>
       </div>
-
-      <div class="private-hub-layer-strip" aria-label="Layer opzionali MatevIA">
-        <article class="private-hub-layer-option">
-          <span>Layer attivabile</span>
-          <h3>MatevIA Core</h3>
-          <p>Funzioni ERP native quando l'azienda ne ha bisogno o vuole estendere il gestionale esistente.</p>
-        </article>
-        <article class="private-hub-layer-option">
-          <span>Layer attivabile</span>
-          <h3>DEX</h3>
-          <p>Esecuzione industriale controllata per portare le decisioni autorizzate fino ai processi operativi.</p>
-        </article>
-        <article class="private-hub-layer-option">
-          <span>Layer attivabile</span>
-          <h3>ENX</h3>
-          <p>Contesto energetico normalizzato per vincoli, indicatori e raccomandazioni governate.</p>
-        </article>
-      </div>
     </section>
 
-    <section class="private-hub-console" aria-labelledby="private-hub-console-title">
-      <div class="private-hub-console-heading">
-        <div class="private-hub-section-heading">
-          <p class="private-hub-eyebrow">Console in azione</p>
-          <h2 id="private-hub-console-title">La complessità diventa leggibile.</h2>
-          <p>Un unico punto di osservazione per stato operativo, decisioni, approvazioni ed evidenze.</p>
-        </div>
-        <p class="private-hub-console-note">La Console non sostituisce l'autorità di ORX: visualizza esclusivamente informazioni, stati e decisioni che il kernel rende disponibili.</p>
-      </div>
-
-      <div class="console-showcase" data-console-showcase tabindex="0" aria-label="Presentazione delle viste MatevIA Console">
-        <article class="console-slide is-active" data-console-slide>
-          <div class="console-window" aria-label="Vista sintetica dello stato dell'ecosistema">
-            <div class="console-window-bar"><span class="console-window-dots"><i></i><i></i><i></i></span><span>MatevIA Console · Ecosystem overview</span></div>
-            <div class="console-ui">
-              <aside class="console-sidebar">
-                <div class="console-logo">Matev<span>IA</span></div>
-                <span class="console-nav-item is-active">Overview</span><span class="console-nav-item">Decisioni</span><span class="console-nav-item">Approvazioni</span><span class="console-nav-item">Capability</span><span class="console-nav-item">Audit trail</span>
-              </aside>
-              <div class="console-main">
-                <div class="console-main-header"><h3>Stato dell'ecosistema</h3><span class="console-status">Operativo</span></div>
-                <div class="console-kpis"><div class="console-kpi"><small>Sistemi connessi</small><strong>12</strong><em>tutti raggiungibili</em></div><div class="console-kpi"><small>Processi governati</small><strong>38</strong><em>6 in esecuzione</em></div><div class="console-kpi"><small>Policy attive</small><strong>24</strong><em>nessuna anomalia</em></div></div>
-                <div class="console-content-grid"><div class="console-panel"><div class="console-panel-title"><span>Attività governate</span><span>Ultime 6 ore</span></div><div class="console-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="console-panel"><div class="console-panel-title"><span>Layer</span><span>Stato</span></div><div class="console-list"><div><span>ORX</span><strong>Attivo</strong></div><div><span>AI Layer</span><strong>Attivo</strong></div><div><span>AI Cognitive</span><strong>Shadow</strong></div><div><span>DEX</span><strong>Connesso</strong></div></div></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="console-slide-copy"><span class="console-slide-count">Vista 01</span><h3>Stato operativo condiviso</h3><p>Direzione, responsabili e operatori accedono allo stesso quadro contestuale, senza ricostruire manualmente le informazioni tra sistemi differenti.</p><ul><li>Stato dei layer e delle integrazioni</li><li>Processi governati in tempo reale</li><li>Indicatori dichiarati da ORX</li></ul></div>
-        </article>
-
-        <article class="console-slide" data-console-slide hidden>
-          <div class="console-window" aria-label="Vista sintetica del flusso di approvazione">
-            <div class="console-window-bar"><span class="console-window-dots"><i></i><i></i><i></i></span><span>MatevIA Console · Approval workspace</span></div>
-            <div class="console-ui">
-              <aside class="console-sidebar"><div class="console-logo">Matev<span>IA</span></div><span class="console-nav-item">Overview</span><span class="console-nav-item">Decisioni</span><span class="console-nav-item is-active">Approvazioni</span><span class="console-nav-item">Capability</span><span class="console-nav-item">Audit trail</span></aside>
-              <div class="console-main"><div class="console-main-header"><h3>Approvazioni richieste</h3><span class="console-status">ORX sincronizzato</span></div><div class="console-kpis"><div class="console-kpi"><small>In attesa</small><strong>4</strong><em>2 ad alta priorità</em></div><div class="console-kpi"><small>Approvate oggi</small><strong>17</strong><em>tempo medio 8 min</em></div><div class="console-kpi"><small>Bloccate da policy</small><strong>2</strong><em>riesame richiesto</em></div></div><div class="console-content-grid"><div class="console-panel"><div class="console-panel-title"><span>Richiesta</span><span>Esito dry-run</span></div><div class="console-list"><div><span>Ripianificazione ordine #1842</span><strong>Pronta</strong></div><div><span>Variazione soglia energetica</span><strong>Revisione</strong></div><div><span>Dispatch manutenzione linea 3</span><strong>Pronta</strong></div><div><span>Modifica capability fornitore</span><strong>Bloccata</strong></div></div></div><div class="console-panel"><div class="console-panel-title"><span>Evidenze</span><span>ORX</span></div><div class="console-list"><div><span>Policy verificate</span><strong>8/8</strong></div><div><span>Vincoli rilevati</span><strong>1</strong></div><div><span>Impatto simulato</span><strong>Basso</strong></div><div><span>Responsabile</span><strong>Produzione</strong></div></div></div></div></div>
-            </div>
-          </div>
-          <div class="console-slide-copy"><span class="console-slide-count">Vista 02</span><h3>Decisioni prima dell'esecuzione</h3><p>Ogni attività sensibile può essere simulata, verificata rispetto alle policy e sottoposta all'approvazione del ruolo competente.</p><ul><li>Dry-run governato</li><li>Responsabilità e priorità visibili</li><li>Dispatch solo dopo autorizzazione</li></ul></div>
-        </article>
-
-        <article class="console-slide" data-console-slide hidden>
-          <div class="console-window" aria-label="Vista sintetica della tracciabilità decisionale">
-            <div class="console-window-bar"><span class="console-window-dots"><i></i><i></i><i></i></span><span>MatevIA Console · Governance evidence</span></div>
-            <div class="console-ui">
-              <aside class="console-sidebar"><div class="console-logo">Matev<span>IA</span></div><span class="console-nav-item">Overview</span><span class="console-nav-item">Decisioni</span><span class="console-nav-item">Approvazioni</span><span class="console-nav-item">Capability</span><span class="console-nav-item is-active">Audit trail</span></aside>
-              <div class="console-main"><div class="console-main-header"><h3>Tracciabilità decisionale</h3><span class="console-status">Evidence completa</span></div><div class="console-kpis"><div class="console-kpi"><small>Eventi oggi</small><strong>146</strong><em>firmati e ordinati</em></div><div class="console-kpi"><small>Decisioni ricostruibili</small><strong>100%</strong><em>contesto incluso</em></div><div class="console-kpi"><small>Eccezioni aperte</small><strong>1</strong><em>assegnata</em></div></div><div class="console-content-grid"><div class="console-panel"><div class="console-panel-title"><span>Sequenza eventi</span><span>10:42–10:49</span></div><div class="console-list"><div><span>Richiesta ricevuta da Core</span><strong>10:42</strong></div><div><span>Contesto acquisito</span><strong>10:43</strong></div><div><span>Policy e vincoli verificati</span><strong>10:44</strong></div><div><span>Approvazione responsabile</span><strong>10:47</strong></div><div><span>Dispatch verso DEX</span><strong>10:49</strong></div></div></div><div class="console-panel"><div class="console-panel-title"><span>Evidence package</span><span>Completo</span></div><div class="console-list"><div><span>Richiedente</span><strong>Identificato</strong></div><div><span>Contesto</span><strong>Versionato</strong></div><div><span>Policy</span><strong>Applicate</strong></div><div><span>Approvatore</span><strong>Registrato</strong></div></div></div></div></div>
-            </div>
-          </div>
-          <div class="console-slide-copy"><span class="console-slide-count">Vista 03</span><h3>Governance evidence completa</h3><p>Il percorso dalla richiesta all'esecuzione resta ricostruibile: contesto, regole applicate, approvazioni, esiti e responsabilità.</p><ul><li>Audit trail cronologico</li><li>Contesto e policy versionati</li><li>Evidenze disponibili per controllo e compliance</li></ul></div>
-        </article>
-
-        <div class="console-controls">
-          <div class="console-dots" aria-label="Seleziona vista"><button class="console-dot is-active" type="button" data-console-dot aria-label="Vista 1"></button><button class="console-dot" type="button" data-console-dot aria-label="Vista 2"></button><button class="console-dot" type="button" data-console-dot aria-label="Vista 3"></button></div>
-          <div class="console-arrows"><button class="console-arrow" type="button" data-console-prev aria-label="Vista precedente">←</button><button class="console-arrow" type="button" data-console-next aria-label="Vista successiva">→</button></div>
-        </div>
-      </div>
-    </section>
-
-    <div data-ecosystem-content></div>
+    <div data-private-hub-dynamic></div>
+    <div data-ecosystem-content hidden></div>
   </section>
 </main>
 <script src="/private-content/ecosystem-auth.generated.js" defer></script>
