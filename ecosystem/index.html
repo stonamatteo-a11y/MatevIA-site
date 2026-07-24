@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/ecosystem-v2.css">
 <link rel="stylesheet" href="/assets/ecosystem-v3.css">
+<link rel="stylesheet" href="/assets/ecosystem-v4.css">
 <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
 <body class="ecosystem-page">
@@ -171,10 +172,69 @@
       </div>
     </section>
 
+    <section class="private-hub-console" aria-labelledby="private-hub-console-title">
+      <div class="private-hub-console-heading">
+        <div class="private-hub-section-heading">
+          <p class="private-hub-eyebrow">Console in azione</p>
+          <h2 id="private-hub-console-title">La complessità diventa leggibile.</h2>
+          <p>Un unico punto di osservazione per stato operativo, decisioni, approvazioni ed evidenze.</p>
+        </div>
+        <p class="private-hub-console-note">La Console non sostituisce l'autorità di ORX: visualizza esclusivamente informazioni, stati e decisioni che il kernel rende disponibili.</p>
+      </div>
+
+      <div class="console-showcase" data-console-showcase tabindex="0" aria-label="Presentazione delle viste MatevIA Console">
+        <article class="console-slide is-active" data-console-slide>
+          <div class="console-window" aria-label="Vista sintetica dello stato dell'ecosistema">
+            <div class="console-window-bar"><span class="console-window-dots"><i></i><i></i><i></i></span><span>MatevIA Console · Ecosystem overview</span></div>
+            <div class="console-ui">
+              <aside class="console-sidebar">
+                <div class="console-logo">Matev<span>IA</span></div>
+                <span class="console-nav-item is-active">Overview</span><span class="console-nav-item">Decisioni</span><span class="console-nav-item">Approvazioni</span><span class="console-nav-item">Capability</span><span class="console-nav-item">Audit trail</span>
+              </aside>
+              <div class="console-main">
+                <div class="console-main-header"><h3>Stato dell'ecosistema</h3><span class="console-status">Operativo</span></div>
+                <div class="console-kpis"><div class="console-kpi"><small>Sistemi connessi</small><strong>12</strong><em>tutti raggiungibili</em></div><div class="console-kpi"><small>Processi governati</small><strong>38</strong><em>6 in esecuzione</em></div><div class="console-kpi"><small>Policy attive</small><strong>24</strong><em>nessuna anomalia</em></div></div>
+                <div class="console-content-grid"><div class="console-panel"><div class="console-panel-title"><span>Attività governate</span><span>Ultime 6 ore</span></div><div class="console-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="console-panel"><div class="console-panel-title"><span>Layer</span><span>Stato</span></div><div class="console-list"><div><span>ORX</span><strong>Attivo</strong></div><div><span>AI Layer</span><strong>Attivo</strong></div><div><span>AI Cognitive</span><strong>Shadow</strong></div><div><span>DEX</span><strong>Connesso</strong></div></div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="console-slide-copy"><span class="console-slide-count">Vista 01</span><h3>Stato operativo condiviso</h3><p>Direzione, responsabili e operatori accedono allo stesso quadro contestuale, senza ricostruire manualmente le informazioni tra sistemi differenti.</p><ul><li>Stato dei layer e delle integrazioni</li><li>Processi governati in tempo reale</li><li>Indicatori dichiarati da ORX</li></ul></div>
+        </article>
+
+        <article class="console-slide" data-console-slide hidden>
+          <div class="console-window" aria-label="Vista sintetica del flusso di approvazione">
+            <div class="console-window-bar"><span class="console-window-dots"><i></i><i></i><i></i></span><span>MatevIA Console · Approval workspace</span></div>
+            <div class="console-ui">
+              <aside class="console-sidebar"><div class="console-logo">Matev<span>IA</span></div><span class="console-nav-item">Overview</span><span class="console-nav-item">Decisioni</span><span class="console-nav-item is-active">Approvazioni</span><span class="console-nav-item">Capability</span><span class="console-nav-item">Audit trail</span></aside>
+              <div class="console-main"><div class="console-main-header"><h3>Approvazioni richieste</h3><span class="console-status">ORX sincronizzato</span></div><div class="console-kpis"><div class="console-kpi"><small>In attesa</small><strong>4</strong><em>2 ad alta priorità</em></div><div class="console-kpi"><small>Approvate oggi</small><strong>17</strong><em>tempo medio 8 min</em></div><div class="console-kpi"><small>Bloccate da policy</small><strong>2</strong><em>riesame richiesto</em></div></div><div class="console-content-grid"><div class="console-panel"><div class="console-panel-title"><span>Richiesta</span><span>Esito dry-run</span></div><div class="console-list"><div><span>Ripianificazione ordine #1842</span><strong>Pronta</strong></div><div><span>Variazione soglia energetica</span><strong>Revisione</strong></div><div><span>Dispatch manutenzione linea 3</span><strong>Pronta</strong></div><div><span>Modifica capability fornitore</span><strong>Bloccata</strong></div></div></div><div class="console-panel"><div class="console-panel-title"><span>Evidenze</span><span>ORX</span></div><div class="console-list"><div><span>Policy verificate</span><strong>8/8</strong></div><div><span>Vincoli rilevati</span><strong>1</strong></div><div><span>Impatto simulato</span><strong>Basso</strong></div><div><span>Responsabile</span><strong>Produzione</strong></div></div></div></div></div>
+            </div>
+          </div>
+          <div class="console-slide-copy"><span class="console-slide-count">Vista 02</span><h3>Decisioni prima dell'esecuzione</h3><p>Ogni attività sensibile può essere simulata, verificata rispetto alle policy e sottoposta all'approvazione del ruolo competente.</p><ul><li>Dry-run governato</li><li>Responsabilità e priorità visibili</li><li>Dispatch solo dopo autorizzazione</li></ul></div>
+        </article>
+
+        <article class="console-slide" data-console-slide hidden>
+          <div class="console-window" aria-label="Vista sintetica della tracciabilità decisionale">
+            <div class="console-window-bar"><span class="console-window-dots"><i></i><i></i><i></i></span><span>MatevIA Console · Governance evidence</span></div>
+            <div class="console-ui">
+              <aside class="console-sidebar"><div class="console-logo">Matev<span>IA</span></div><span class="console-nav-item">Overview</span><span class="console-nav-item">Decisioni</span><span class="console-nav-item">Approvazioni</span><span class="console-nav-item">Capability</span><span class="console-nav-item is-active">Audit trail</span></aside>
+              <div class="console-main"><div class="console-main-header"><h3>Tracciabilità decisionale</h3><span class="console-status">Evidence completa</span></div><div class="console-kpis"><div class="console-kpi"><small>Eventi oggi</small><strong>146</strong><em>firmati e ordinati</em></div><div class="console-kpi"><small>Decisioni ricostruibili</small><strong>100%</strong><em>contesto incluso</em></div><div class="console-kpi"><small>Eccezioni aperte</small><strong>1</strong><em>assegnata</em></div></div><div class="console-content-grid"><div class="console-panel"><div class="console-panel-title"><span>Sequenza eventi</span><span>10:42–10:49</span></div><div class="console-list"><div><span>Richiesta ricevuta da Core</span><strong>10:42</strong></div><div><span>Contesto acquisito</span><strong>10:43</strong></div><div><span>Policy e vincoli verificati</span><strong>10:44</strong></div><div><span>Approvazione responsabile</span><strong>10:47</strong></div><div><span>Dispatch verso DEX</span><strong>10:49</strong></div></div></div><div class="console-panel"><div class="console-panel-title"><span>Evidence package</span><span>Completo</span></div><div class="console-list"><div><span>Richiedente</span><strong>Identificato</strong></div><div><span>Contesto</span><strong>Versionato</strong></div><div><span>Policy</span><strong>Applicate</strong></div><div><span>Approvatore</span><strong>Registrato</strong></div></div></div></div></div>
+            </div>
+          </div>
+          <div class="console-slide-copy"><span class="console-slide-count">Vista 03</span><h3>Governance evidence completa</h3><p>Il percorso dalla richiesta all'esecuzione resta ricostruibile: contesto, regole applicate, approvazioni, esiti e responsabilità.</p><ul><li>Audit trail cronologico</li><li>Contesto e policy versionati</li><li>Evidenze disponibili per controllo e compliance</li></ul></div>
+        </article>
+
+        <div class="console-controls">
+          <div class="console-dots" aria-label="Seleziona vista"><button class="console-dot is-active" type="button" data-console-dot aria-label="Vista 1"></button><button class="console-dot" type="button" data-console-dot aria-label="Vista 2"></button><button class="console-dot" type="button" data-console-dot aria-label="Vista 3"></button></div>
+          <div class="console-arrows"><button class="console-arrow" type="button" data-console-prev aria-label="Vista precedente">←</button><button class="console-arrow" type="button" data-console-next aria-label="Vista successiva">→</button></div>
+        </div>
+      </div>
+    </section>
+
     <div data-ecosystem-content></div>
   </section>
 </main>
 <script src="/private-content/ecosystem-auth.generated.js" defer></script>
 <script src="/assets/ecosystem.js" defer></script>
+<script src="/assets/ecosystem-showcase.js" defer></script>
 </body>
 </html>
