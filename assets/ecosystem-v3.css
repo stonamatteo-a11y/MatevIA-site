@@ -159,11 +159,11 @@
 .node-plc { left: 50%; bottom: 2%; transform: translateX(-50%); }
 
 .node-erp::after { width: 185px; left: 100%; top: 70%; transform: rotate(28deg); }
-.node-docs::after { width: 185px; right: 100%; top: 70%; transform: rotate(152deg); transform-origin: right center; }
+.node-docs::after { width: 185px; right: 100%; top: 70%; transform: rotate(-28deg); transform-origin: right center; }
 .node-mes::after { width: 170px; left: 100%; top: 50%; }
-.node-energy::after { width: 170px; right: 100%; top: 50%; transform: rotate(180deg); transform-origin: right center; }
+.node-energy::after { width: 170px; right: 100%; top: 50%; transform: none; transform-origin: right center; }
 .node-database::after { width: 170px; left: 100%; top: 20%; transform: rotate(-28deg); }
-.node-api::after { width: 170px; right: 100%; top: 20%; transform: rotate(208deg); transform-origin: right center; }
+.node-api::after { width: 170px; right: 100%; top: 20%; transform: rotate(28deg); transform-origin: right center; }
 .node-plc::after { display: none; }
 
 .private-hub-layer-strip {
