@@ -1,0 +1,29 @@
+.workflow-track .workflow-step{cursor:pointer;outline:none;transition:transform .3s ease,border-color .3s ease,background .3s ease,box-shadow .3s ease,opacity .3s ease}
+.workflow-track:hover .workflow-step:not(:hover):not(.is-selected){opacity:.62}
+.workflow-step.is-selected,.workflow-step:focus-visible{transform:translateY(-8px);border-color:rgba(86,156,255,.72);background:linear-gradient(180deg,rgba(24,49,88,.94),rgba(9,19,35,.97));box-shadow:0 0 0 1px rgba(77,145,255,.13),0 20px 50px rgba(0,0,0,.28),0 0 30px rgba(48,119,255,.18)}
+.workflow-step.is-selected .workflow-index{color:#8fc2ff}
+.workflow-step.is-selected strong{color:#dceaff}
+.workflow-detail{position:relative;margin:28px 0 36px;padding:30px 32px;border:1px solid rgba(111,166,255,.24);border-radius:24px;background:radial-gradient(circle at 82% 18%,rgba(46,116,255,.12),transparent 34%),linear-gradient(145deg,rgba(13,24,43,.96),rgba(6,12,22,.98));box-shadow:0 30px 80px rgba(0,0,0,.22);overflow:hidden}
+.workflow-detail::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(102,151,229,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(102,151,229,.035) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;mask-image:linear-gradient(to bottom,black,transparent 92%)}
+.workflow-detail>*{position:relative;z-index:1}
+.workflow-detail.is-changing{animation:workflow-detail-enter .34s ease both}
+.workflow-detail-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+.workflow-detail-head>span{color:var(--hub-gold);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.workflow-detail-head>strong{padding:8px 11px;border:1px solid rgba(82,163,255,.22);border-radius:999px;background:rgba(39,117,255,.09);color:#bcd9ff;font-size:11px;font-weight:700}
+.workflow-detail h3{margin:0;font-size:clamp(25px,3vw,40px);letter-spacing:-.035em}
+.workflow-detail>p{max-width:850px;margin:12px 0 0;color:var(--hub-muted);font-size:15px;line-height:1.65}
+.workflow-detail-body{margin-top:24px}
+.workflow-detail-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0}
+.workflow-detail-grid div{min-height:112px;padding:16px;border:1px solid rgba(122,169,241,.14);border-radius:16px;background:rgba(7,14,26,.72)}
+.workflow-detail-grid dt{color:#7189ad;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.workflow-detail-grid dd{margin:10px 0 0;color:#e3edff;font-size:13px;line-height:1.45}
+.workflow-detail-timeline{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;margin:0;padding:0;list-style:none}
+.workflow-detail-timeline li{position:relative;min-height:112px;padding:16px 14px;border-top:1px solid rgba(91,153,255,.34);background:linear-gradient(180deg,rgba(29,75,145,.08),transparent)}
+.workflow-detail-timeline li::before{content:'';position:absolute;top:-5px;left:14px;width:9px;height:9px;border-radius:50%;background:#68aaff;box-shadow:0 0 14px rgba(82,151,255,.8)}
+.workflow-detail-timeline time{display:block;color:#85baff;font-size:11px;font-weight:800;letter-spacing:.08em}
+.workflow-detail-timeline span{display:block;margin-top:10px;color:#d9e8ff;font-size:12px;line-height:1.45}
+.workflow-detail-hint{margin-top:20px!important;color:#7184a2!important;font-size:11px!important;letter-spacing:.02em}
+@keyframes workflow-detail-enter{from{opacity:.55;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1120px){.workflow-detail-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.workflow-detail-timeline{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.workflow-detail-timeline li{border:1px solid rgba(91,153,255,.2);border-radius:14px}.workflow-detail-timeline li::before{top:14px}}
+@media(max-width:760px){.workflow-track:hover .workflow-step:not(:hover):not(.is-selected){opacity:1}.workflow-step.is-selected,.workflow-step:focus-visible{transform:translateY(-4px)}.workflow-detail{margin-top:20px;padding:22px 18px}.workflow-detail-head{align-items:flex-start;flex-direction:column}.workflow-detail-grid,.workflow-detail-timeline{grid-template-columns:1fr}.workflow-detail-grid div,.workflow-detail-timeline li{min-height:0}.workflow-detail-timeline{gap:10px}}
+@media(prefers-reduced-motion:reduce){.workflow-track .workflow-step,.workflow-detail{animation:none!important;transition:none!important}}
