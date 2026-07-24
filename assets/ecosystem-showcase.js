@@ -59,20 +59,36 @@
         ${productCard('Industrial Execution Layer', 'DEX', 'Porta le attività autorizzate nei processi industriali, controllando macchine, eventi, comandi e allarmi.', '/images/product/dex-production.webp', 'DEX con stato produzione, macchine, eventi e allarmi', ['Machine state', 'Command validation', 'Events', 'Alarms'])}
         ${productCard('Energy Context Layer', 'ENX', 'Normalizza il contesto energetico e rende disponibili a ORX segnali, raccomandazioni e vincoli.', '/images/product/enx-energy-context.webp', 'ENX con consumo, segnali e vincoli energetici per ORX', ['Energy context', 'Signals', 'Constraints', 'ORX context'])}
       </div>
-      <article class="cognitive-module">
+
+      <article class="cognitive-module" data-cognitive-visual>
         <div class="cognitive-layout">
-          <div class="product-module-copy">
+          <div class="product-module-copy cognitive-copy">
             <span class="product-module-label">Backend cognitive service</span>
             <h3>AI Cognitive</h3>
-            <p>Osserva le sorgenti, correla i segnali, costruisce memoria contestuale e consegna interpretazioni strutturate a ORX. In Shadow Mode non prende decisioni operative.</p>
+            <p>Osserva le sorgenti, correla i segnali, costruisce memoria contestuale e consegna interpretazioni strutturate a ORX. In Shadow Mode non prende decisioni operative e non invia comandi diretti.</p>
             <div class="product-module-tags"><span>Shadow Mode</span><span>Context building</span><span>Memory</span><span>No direct execution</span></div>
+            <div class="cognitive-status" aria-live="polite">
+              <span data-cognitive-status-label>Osserva</span>
+              <p data-cognitive-status-copy>Acquisisce informazioni da ERP, MES, documenti, IoT ed ENX.</p>
+            </div>
           </div>
-          <div class="cognitive-flow" aria-label="Flusso AI Cognitive">
-            <div class="cognitive-step"><small>01</small><strong>Osserva</strong></div>
-            <div class="cognitive-step"><small>02</small><strong>Correla</strong></div>
-            <div class="cognitive-step"><small>03</small><strong>Costruisce memoria</strong></div>
-            <div class="cognitive-step"><small>04</small><strong>Interpreta</strong></div>
-            <div class="cognitive-step"><small>05</small><strong>Alimenta ORX</strong></div>
+
+          <div class="cognitive-visual" aria-label="Visualizzazione animata del funzionamento di AI Cognitive">
+            <div class="cognitive-sources" aria-label="Sorgenti informative">
+              <span>ERP</span><span>MES</span><span>IoT</span><span>Documenti</span><span>ENX</span>
+            </div>
+            <div class="cognitive-source-line" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="cognitive-stage" data-cognitive-stage="0"><small>01</small><strong>Osserva</strong><span>Acquisisce segnali e stato operativo.</span></div>
+            <div class="cognitive-connector" aria-hidden="true"><i></i></div>
+            <div class="cognitive-stage" data-cognitive-stage="1"><small>02</small><strong>Correla</strong><span>Collega eventi, dati e relazioni.</span></div>
+            <div class="cognitive-connector" aria-hidden="true"><i></i></div>
+            <div class="cognitive-stage" data-cognitive-stage="2"><small>03</small><strong>Memoria contestuale</strong><span>Conserva una rappresentazione aggiornata.</span></div>
+            <div class="cognitive-connector" aria-hidden="true"><i></i></div>
+            <div class="cognitive-stage" data-cognitive-stage="3"><small>04</small><strong>Interpreta</strong><span>Genera comprensione strutturata.</span></div>
+            <div class="cognitive-connector" aria-hidden="true"><i></i></div>
+            <div class="cognitive-stage" data-cognitive-stage="4"><small>05</small><strong>Contesto verso ORX</strong><span>Consegna evidenze e interpretazioni.</span></div>
+            <div class="cognitive-orx-link" aria-hidden="true"><i></i></div>
+            <div class="cognitive-orx" data-cognitive-orx><small>Decision authority</small><strong>ORX</strong><span>Valuta policy, approvazioni e responsabilità.</span></div>
           </div>
         </div>
       </article>
@@ -100,6 +116,73 @@
         <article class="workflow-evidence-card"><h3>Human-in-the-loop reale</h3><p>L'approvazione è una condizione nativa del workflow, governata da ruoli, soglie e policy aziendali.</p></article>
       </div>
     </section>`;
+
+  const cognitive = root.querySelector('[data-cognitive-visual]');
+  if (cognitive) {
+    const stages = Array.from(cognitive.querySelectorAll('[data-cognitive-stage]'));
+    const connectors = Array.from(cognitive.querySelectorAll('.cognitive-connector'));
+    const sourceLine = cognitive.querySelector('.cognitive-source-line');
+    const orxLink = cognitive.querySelector('.cognitive-orx-link');
+    const orx = cognitive.querySelector('[data-cognitive-orx]');
+    const statusLabel = cognitive.querySelector('[data-cognitive-status-label]');
+    const statusCopy = cognitive.querySelector('[data-cognitive-status-copy]');
+    const messages = [
+      ['Osserva', 'Acquisisce informazioni da ERP, MES, documenti, IoT ed ENX.'],
+      ['Correla', 'Collega eventi, dati e relazioni provenienti da domini differenti.'],
+      ['Memoria contestuale', 'Costruisce una memoria contestuale persistente e aggiornata.'],
+      ['Interpreta', 'Genera una comprensione strutturata della situazione operativa.'],
+      ['Contesto verso ORX', 'Consegna a ORX evidenze e interpretazioni per decisioni governate.'],
+      ['ORX', 'ORX valuta policy, approvazioni e responsabilità prima di qualsiasi azione.']
+    ];
+    let step = 0;
+    let timer;
+
+    const clearState = () => {
+      stages.forEach((node) => node.classList.remove('is-active', 'is-complete'));
+      connectors.forEach((node) => node.classList.remove('is-active'));
+      sourceLine?.classList.remove('is-active');
+      orxLink?.classList.remove('is-active');
+      orx?.classList.remove('is-active');
+    };
+
+    const renderStep = () => {
+      clearState();
+      stages.forEach((node, index) => {
+        if (index < Math.min(step, 5)) node.classList.add('is-complete');
+      });
+
+      if (step < 5) {
+        stages[step]?.classList.add('is-active');
+        if (step === 0) sourceLine?.classList.add('is-active');
+        if (step > 0) connectors[step - 1]?.classList.add('is-active');
+      } else if (step === 5) {
+        stages.forEach((node) => node.classList.add('is-complete'));
+        orxLink?.classList.add('is-active');
+        orx?.classList.add('is-active');
+      }
+
+      const message = messages[Math.min(step, messages.length - 1)];
+      if (statusLabel) statusLabel.textContent = message[0];
+      if (statusCopy) statusCopy.textContent = message[1];
+
+      const delay = step < 5 ? 2000 : step === 5 ? 1000 : 1000;
+      step = step >= 6 ? 0 : step + 1;
+      timer = window.setTimeout(renderStep, delay);
+    };
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (reduceMotion.matches) {
+      stages.forEach((node) => node.classList.add('is-complete'));
+      orx?.classList.add('is-active');
+    } else {
+      renderStep();
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      window.clearTimeout(timer);
+      if (!document.hidden && !reduceMotion.matches) renderStep();
+    });
+  }
 
   const lightbox = document.createElement('div');
   lightbox.className = 'product-lightbox';
