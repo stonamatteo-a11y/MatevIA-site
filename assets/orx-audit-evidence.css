@@ -1,0 +1,290 @@
+.orx-audit-section-heading {
+  margin-top: clamp(42px, 6vw, 76px);
+  margin-bottom: 20px;
+}
+
+.orx-audit-section-heading h2 {
+  max-width: 820px;
+}
+
+.orx-audit-evidence {
+  margin-top: 34px;
+  padding: clamp(24px, 4vw, 46px);
+  overflow: hidden;
+  border: 1px solid rgba(100, 176, 255, .24);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(76, 145, 255, .15), transparent 28%),
+    radial-gradient(circle at 8% 100%, rgba(39, 199, 255, .08), transparent 30%),
+    linear-gradient(145deg, rgba(11, 21, 38, .96), rgba(5, 10, 19, .98));
+  box-shadow: 0 34px 90px rgba(0, 0, 0, .3);
+}
+
+.orx-audit-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, .28fr);
+  gap: 36px;
+  align-items: end;
+}
+
+.orx-audit-heading h3 {
+  max-width: 880px;
+  margin: 8px 0 14px;
+  color: #f4f8ff;
+  font-size: clamp(28px, 3.3vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+
+.orx-audit-heading > div > p:last-child {
+  max-width: 870px;
+  margin: 0;
+  color: var(--hub-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.orx-audit-outcome {
+  padding: 22px;
+  border: 1px solid rgba(80, 223, 174, .25);
+  border-radius: 20px;
+  background: rgba(13, 51, 47, .42);
+}
+
+.orx-audit-outcome span,
+.orx-audit-outcome small {
+  display: block;
+  color: #9eb6ca;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.orx-audit-outcome strong {
+  display: block;
+  margin: 5px 0 8px;
+  color: #79efbd;
+  font-size: 27px;
+}
+
+.orx-audit-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 34px 0 24px;
+}
+
+.orx-audit-metrics > div {
+  min-height: 112px;
+  padding: 20px;
+  border: 1px solid rgba(126, 164, 255, .16);
+  border-radius: 18px;
+  background: rgba(8, 16, 29, .72);
+}
+
+.orx-audit-metrics strong {
+  display: block;
+  color: #edf5ff;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.orx-audit-metrics span {
+  display: block;
+  margin-top: 10px;
+  color: #9eb1ca;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.orx-audit-metrics .is-zero strong { color: #74efc3; }
+
+.orx-audit-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(126, 164, 255, .15);
+  border-radius: 20px;
+  background: rgba(3, 9, 17, .62);
+}
+
+.orx-audit-table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+}
+
+.orx-audit-table th,
+.orx-audit-table td {
+  padding: 17px 19px;
+  border-bottom: 1px solid rgba(126, 164, 255, .11);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.orx-audit-table th {
+  color: #8ba6c5;
+  background: rgba(14, 27, 47, .75);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.orx-audit-table td {
+  color: #aebed2;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.orx-audit-table td:first-child {
+  width: 23%;
+  color: #e8f1ff;
+  font-weight: 700;
+}
+
+.orx-audit-table td:last-child { width: 18%; }
+.orx-audit-table tr:last-child td { border-bottom: 0; }
+.orx-audit-table code { color: #ffd886; }
+
+.audit-state {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.audit-state.is-ok {
+  color: #80eec0;
+  background: rgba(39, 181, 127, .13);
+  border: 1px solid rgba(68, 218, 160, .22);
+}
+
+.audit-state.is-warn {
+  color: #ffd785;
+  background: rgba(210, 149, 43, .13);
+  border: 1px solid rgba(236, 178, 65, .25);
+}
+
+.audit-state.is-blocked {
+  color: #a7c9ff;
+  background: rgba(70, 124, 216, .15);
+  border: 1px solid rgba(102, 158, 255, .26);
+}
+
+.audit-state.is-zero {
+  color: #83efc6;
+  background: rgba(43, 174, 131, .13);
+  border: 1px solid rgba(83, 222, 170, .24);
+}
+
+.orx-audit-data {
+  display: grid;
+  grid-template-columns: minmax(240px, .62fr) minmax(0, 1.38fr);
+  gap: 28px;
+  align-items: start;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid rgba(126, 164, 255, .13);
+  border-radius: 20px;
+  background: rgba(7, 18, 34, .48);
+}
+
+.orx-audit-data-heading h4 {
+  margin: 6px 0 10px;
+  color: #f0f6ff;
+  font-size: clamp(20px, 2vw, 27px);
+  line-height: 1.15;
+}
+
+.orx-audit-data-heading > p:last-child {
+  margin: 0;
+  color: #9fb2c9;
+  line-height: 1.65;
+}
+
+.orx-audit-data .orx-audit-table-wrap { margin: 0; }
+
+.orx-audit-data-table {
+  min-width: 540px;
+}
+
+.orx-audit-data-table th { width: 50%; }
+
+.orx-audit-data-table td {
+  color: #b9c9dc;
+  line-height: 1.45;
+}
+
+.orx-audit-data-table td:first-child {
+  color: #dce8f7;
+}
+
+.orx-audit-conclusion {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .45fr);
+  gap: 28px;
+  align-items: center;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(126, 164, 255, .13);
+}
+
+.orx-audit-conclusion > div {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.orx-audit-conclusion > div > span {
+  display: grid;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  color: #071711;
+  background: #6cebb6;
+  font-weight: 900;
+}
+
+.orx-audit-conclusion p {
+  margin: 0;
+  color: #b9c9dc;
+  line-height: 1.65;
+}
+
+.orx-audit-conclusion strong { color: #f0f6ff; }
+
+.orx-audit-conclusion small {
+  color: #8195ae;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .orx-audit-heading,
+  .orx-audit-conclusion,
+  .orx-audit-data { grid-template-columns: 1fr; }
+  .orx-audit-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .orx-audit-evidence {
+    margin-top: 22px;
+    padding: 20px 14px;
+    border-radius: 22px;
+  }
+  .orx-audit-heading { gap: 22px; }
+  .orx-audit-heading h3 { font-size: 28px; }
+  .orx-audit-metrics { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .orx-audit-metrics > div { min-height: 98px; padding: 16px 12px; }
+  .orx-audit-metrics strong { font-size: 29px; }
+  .orx-audit-metrics span { font-size: 10px; }
+  .orx-audit-data { padding: 18px 14px; }
+  .orx-audit-table th,
+  .orx-audit-table td { padding: 14px; }
+}

@@ -41,6 +41,77 @@
         <article class="architecture-node architecture-enx is-optional"><small>Layer attivabile</small><h3>ENX</h3><p>Contesto energetico, indicatori, vincoli e raccomandazioni.</p></article>
         <div class="architecture-foundation"><span>On-premise</span><span>Tenant isolati</span><span>Policy versionate</span><span>Human approval</span><span>Audit trail</span></div>
       </div>
+
+      <div class="private-hub-section-heading orx-audit-section-heading">
+        <p class="private-hub-eyebrow">Evidenza verificabile</p>
+        <h2>Audit ORX: governance verificata sul campo.</h2>
+      </div>
+
+      <article class="orx-audit-evidence" aria-labelledby="orx-audit-title">
+        <header class="orx-audit-heading">
+          <div>
+            <p class="private-hub-eyebrow">Governance evidence · 23 luglio 2026</p>
+            <h3 id="orx-audit-title">Il controllo resta attivo anche quando il contesto è degradato.</h3>
+            <p>In un test ORX con DEX ed ENX, un dato energetico non aggiornato è stato riconosciuto, il piano è stato revisionato e nessun comando operativo è stato eseguito.</p>
+          </div>
+          <div class="orx-audit-outcome" aria-label="Esito della verifica di governance">
+            <span>Esito governance</span>
+            <strong>Vincoli rispettati</strong>
+            <small>Dry-run tecnico: Partial</small>
+          </div>
+        </header>
+
+        <div class="orx-audit-metrics" aria-label="Indicatori sintetici del test">
+          <div><strong>3</strong><span>revisioni correlate</span></div>
+          <div><strong>5</strong><span>dry-run registrati</span></div>
+          <div><strong>1</strong><span>approvazione umana</span></div>
+          <div class="is-zero"><strong>0</strong><span>comandi operativi</span></div>
+        </div>
+
+        <div class="orx-audit-table-wrap">
+          <table class="orx-audit-table">
+            <thead>
+              <tr><th>Controllo verificato</th><th>Evidenza osservata</th><th>Risultato</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Interpretazione AI</td><td>Accettata come input advisory prima della pianificazione, senza autorità decisionale.</td><td><span class="audit-state is-ok">Advisory rispettato</span></td></tr>
+              <tr><td>Contesto operativo DEX</td><td>Stato delle macchine acquisito esclusivamente tramite capability in sola lettura.</td><td><span class="audit-state is-ok">Completato</span></td></tr>
+              <tr><td>Contesto energetico ENX</td><td>Freshness identificata come <code>STALE</code>; evidenza mantenuta in stato degradato.</td><td><span class="audit-state is-warn">Degradato rilevato</span></td></tr>
+              <tr><td>Revisione del piano</td><td>Tre revisioni correlate; feedback e lineage conservati senza sovrascrivere lo storico.</td><td><span class="audit-state is-ok">Tracciato</span></td></tr>
+              <tr><td>Approvazione umana</td><td>Approvazione registrata senza estendere permessi o trasformare capability read-only.</td><td><span class="audit-state is-ok">Registrata</span></td></tr>
+              <tr><td>Dispatch finale</td><td>Bloccato perché nessuna route selezionata esponeva capacità di scrittura.</td><td><span class="audit-state is-blocked">Impedito</span></td></tr>
+              <tr><td>Effetti esterni</td><td>Nessun comando inviato a DEX, ENX, sistemi OT o altri componenti operativi.</td><td><span class="audit-state is-zero">Zero effetti</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section class="orx-audit-data" aria-labelledby="orx-audit-data-title">
+          <div class="orx-audit-data-heading">
+            <p class="private-hub-eyebrow">Data minimization</p>
+            <h4 id="orx-audit-data-title">Audit mirato, non raccolta indiscriminata.</h4>
+            <p>ORX registra esclusivamente le evidenze tecniche necessarie a ricostruire il processo decisionale, verificarne la governance e dimostrare il rispetto dei vincoli.</p>
+          </div>
+          <div class="orx-audit-table-wrap">
+            <table class="orx-audit-table orx-audit-data-table">
+              <thead>
+                <tr><th>Dati registrati dall'audit</th><th>Dati non inseriti nell'audit</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Esiti dei controlli di governance</td><td>Nomi e indirizzi email</td></tr>
+                <tr><td>Revisioni del piano e relativi stati</td><td>Credenziali e password</td></tr>
+                <tr><td>Approvazione umana tramite identificativo tecnico</td><td>Token di autenticazione</td></tr>
+                <tr><td>Risultati tecnici del dry-run</td><td>Documenti e contenuti aziendali</td></tr>
+                <tr><td>Stato del dispatch e numero di comandi eseguiti</td><td>Dati anagrafici dell'operatore</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="orx-audit-conclusion">
+          <div><span aria-hidden="true">✓</span><p><strong>Separazione delle responsabilità verificata.</strong> L'approvazione del piano non ha aggirato i vincoli tecnici né autorizzato un'esecuzione non prevista.</p></div>
+          <small>Sintesi anonimizzata di un audit ORX in ambiente di test. L'evidenza autorevole resta conservata in ORX. Nessuna esecuzione Live Canary è stata effettuata.</small>
+        </footer>
+      </article>
     </section>
 
     <section class="private-hub-products" aria-labelledby="private-hub-products-title">
